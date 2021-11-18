@@ -39,3 +39,6 @@ vignettes/*.pdf
 *.Rproj
 # R Environment Variables
 .Renviron
+
+# add clipboard
+clipboard
