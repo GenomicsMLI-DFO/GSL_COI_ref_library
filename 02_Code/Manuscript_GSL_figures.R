@@ -429,8 +429,8 @@ grapha.acc
 graphb <-RES.NCBI.test %>% filter(Levels %in% c("species", "genus"),
                                   threshold == 97) %>% 
   group_by(method, threshold, Taxo.group, Levels.group, Similar) %>% summarise(N = n()) %>%
-  mutate(freq = N / sum(N),
-         Levels.group = factor(Levels.group, levels =  c("> genus or unassigned", "genus", "species"))) %>% #View()
+  mutate(freq = N / sum(N)) %>% 
+         #Levels.group = factor(Levels.group, levels =  c("> genus or unassigned", "genus", "species"))) %>% #View()
   filter(Similar != "Wrong identification") %>% 
   ggplot(aes(y=freq, x = method, fill = Levels.group, group = Levels.group)) +
   #geom_point(position=position_dodge(width=0.3), size = 3) +
@@ -503,8 +503,8 @@ grapha.acc.over
 graphb.over <- RES.NCBI.test %>% filter(Levels %in% c("species", "genus")) %>% 
     group_by(method.graph, threshold, Levels.group, Similar) %>% summarise(N = n()) %>%
   mutate(freq = N / sum(N),
-         threshold = factor(threshold),
-         Levels.group = factor(Levels.group, levels =  c("> genus or unassigned", "genus", "species"))) %>% #View()
+         threshold = factor(threshold)) %>% 
+        # Levels.group = factor(Levels.group, levels =  c("> genus or unassigned", "genus", "species"))) %>% #View()
   filter(Similar != "Wrong identification") %>% 
   ggplot(aes(y=freq, x = threshold, fill = Levels.group, group = Levels.group)) +
   #geom_point(position=position_dodge(width=0.3), size = 3) +
@@ -684,4 +684,4 @@ graph.comparaison.v2 <- ggarrange(grapha.over, grapha,
 graph.comparaison.v2
 
 ggsave(filename = file.path(here::here(), "03_Results", "fig_NCBI_tests.png"), 
-       plot = graph.comparaison.v2, width = 8, height = 10, units = "in", bg = "white")
+       plot = graph.comparaison.v2, width = 9, height = 10, units = "in", bg = "white")
