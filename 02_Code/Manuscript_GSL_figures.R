@@ -164,7 +164,8 @@ figSPa <- RES.total %>%  filter(Levels == "species") %>%
   group_by(Phylum, Taxon,method.threshold, Validity, DB) %>% summarise(Ntot = sum(Nreads.tot)) %>% 
   filter(#met.com %in% c("IDtaxa 60", "LCA 97", "Top hit 97"),
     Ntot > 0) %>% 
-  mutate(Taxon = factor(Taxon, levels = SP.order)) %>%
+  mutate(Taxon = factor(Taxon, levels = SP.order),
+         DB = DB %>% str_replace("_", "-")) %>%
   ggplot(aes(x = method.threshold, y = Taxon, fill = Validity)) + 
   geom_bin2d(col = "gray") +
   labs(x="", y="") +
@@ -198,11 +199,11 @@ figSPb <- RES.total %>%   filter(Levels == "species") %>%
   filter(Ntot > 0) %>% 
    group_by(method.threshold, Validity, DB) %>% 
   summarise(Ndetect = length(unique(Taxon))) %>% 
-  
+  mutate(DB = DB %>% str_replace("_", "-")) %>% 
   ggplot(aes(x = method.threshold, y = Ndetect, fill = Validity)) + 
   geom_bar(stat = "identity", position = position_stack(reverse = TRUE)) +
   #geom_hline(yintercept = c(68, 72)) +
-  labs(y="N detections", x="") +
+  labs(y="N species detected", x="") +
   #  scale_fill_manual(name = "Species detection category", 
   #                    values = c("cornflowerblue", "darkslategray1", "darkgoldenrod1" , "deepskyblue1", "brown1"))+
   #scale_fill_manual(name = "Species detection category", 
@@ -224,9 +225,12 @@ figSPb <- RES.total %>%   filter(Levels == "species") %>%
   ) #+ coord_flip()
 figSPb
 
+RES.total %>% pull(assigner) %>% unique()
 
 figSPc <- RES.total %>% filter(Levels == "species") %>% 
   left_join(ESV.reads %>% select(QueryAccVer = ID, Nreads.tot)) %>% #View()  group_by(Phylum, Taxon, Validity, DB) %>% 
+  
+  filter(assigner %in% c("IDtaxa 40", "Top hit 95")) %>% 
   group_by(Phylum, Taxon, Validity, DB) %>% 
   summarise(Ntot = sum(Nreads.tot)) %>% 
   filter(Ntot > 0) %>% 
@@ -272,8 +276,23 @@ figSP <- ggpubr::ggarrange(ggarrange(figSPb + theme(legend.position = "none"),
 
 figSP
 
+figSP2 <- ggpubr::ggarrange(figSPa + theme(legend.position = "none"), 
+                            ggarrange(figSPb + theme(legend.position = "none"),
+                                     
+                                     figSPc,
+                                     get_legend(figSPb),
+                                     labels = c("B", "C", ""),
+                                     nrow =3, heights = c(3,3,2)), 
+                              
+                           # bar plot spaning two columns                       # box plot and scatter plot
+                           labels = c("A", ""),
+                           ncol = 2, nrow = 1, widths = c(5,3), 
+                           common.legend = F)
+
+figSP2
+
 ggsave(filename = file.path(here::here(), "03_Results", "fig_Assignement_SP.png"), 
-       plot = figSP, width = 8, height = 9, units = "in", bg = "white")
+       plot = figSP2, width = 8, height = 9, units = "in", bg = "white")
 
 
 # Stats
