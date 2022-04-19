@@ -61,12 +61,60 @@ RES.total <- RES.total %>% filter(kingdom %in% c("Animalia", "Metazoa"),
 
 # Annotation
 
+
+# COI ref db --------------------------------------------------------------
+
+scale_fill_manual(name = "Species detection category", 
+                  values = c(colorBlindBlack8[4], colorBlindBlack8[5], colorBlindBlack8[2], colorBlindBlack8[3], colorBlindBlack8[7]))
+  
+
 Taxa.Seq.final <- readr::read_csv2(file.path(here::here(), "00_GSL_library", "GSL_included_taxa.csv"))
 
 Taxa.Seq.final
 
+#View(Taxa.Seq.final )
 
-Clef.taxa <- Taxa.Seq.final %>% select(Taxon = "Name", Validity)
+Validity.df <- data.frame(Validity =  c("Sufficient data", "BIN sharing", "Insufficient data", "No genetic data"),
+                          Validity.new = c("Reliable",  "Unreliable due to BIN sharing", "Unreliable due to gaps","No sequences available"))
+
+Taxa.Seq.final <- Taxa.Seq.final %>% 
+  left_join(Validity.df) %>% 
+  mutate(
+  Taxo.group = ifelse(phylum %in% c("Sipuncula", "Nemertea", "Brachiopoda", "Annelida"), "Annelida<br>Brachipoda<br>Nemertea",
+                      ifelse(phylum %in% c("Porifera", "Cnidaria"), "Cnidaria<br>Porifera", 
+                             phylum)),
+  Taxo.group = factor(Taxo.group, levels = c("Rotifera","Cnidaria<br>Porifera", "Bryozoa", "Annelida<br>Brachipoda<br>Nemertea", "Mollusca", "Echinodermata", "Arthropoda", "Chordata" )),
+  
+  Validity = factor(Validity, levels = c("Sufficient data", "BIN sharing", "Insufficient data", "No genetic data")),
+  Validity.new = factor(Validity.new, levels = c("Reliable",  "Unreliable due to BIN sharing","Unreliable due to gaps", "No sequences available")),
+  Phylum = factor(phylum, levels = c("Rotifera","Cnidaria", "Porifera", "Bryozoa", "Annelida", "Brachiopoda", "Sipuncula", "Nemertea", "Mollusca", "Echinodermata", "Arthropoda", "Chordata" ))
+)
+
+
+gg.overview.GSLrl <- Taxa.Seq.final %>% filter(WithinNWA == "Yes", Level == "Species") %>% 
+                         group_by(Phylum, Validity.new) %>% 
+  summarise(N = n()) %>% 
+  mutate(SUM = sum(N),
+       freq = N / sum(N)) %>% 
+  ggplot(aes(x = 1, y = freq, fill = Validity.new)) +
+  geom_bar(width = , stat = "identity", color = "gray10", cex = 0.2) +
+  coord_polar("y", start = 0) + 
+  scale_fill_manual(name = "Species detection category", 
+                    values = c(colorBlindBlack8[4], colorBlindBlack8[5], colorBlindBlack8[2],"gray"))+
+  
+  geom_text(aes(y = 0.1, label = paste0("n=",SUM)), vjust = 4, col = "black", cex = 3) +
+  facet_wrap(~Phylum, nrow = 2) + theme_void() +
+  theme(legend.title = element_blank(),
+        legend.position = "bottom",
+        plot.background = element_rect(fill = "white", colour = NA),
+        plot.margin = margin(t = 20, r = 10, b = 10, l = 10, unit = "pt"))
+
+
+#ggsave(filename = "03_Results/fig_GSLrl_coverage.png",
+#        plot = gg.overview.GSLrl,
+#       width = 7, height = 3, units = "in")
+
+Clef.taxa <- Taxa.Seq.final %>% select(Taxon = "Name", Validity.new) %>% mutate(Validity.new = as.character(Validity.new))
 
 # NEW FIG
 SP.order <- RES.total %>% arrange(phylum, class, order, family, genus, Taxon) %>% pull(Taxon) %>% unique()
@@ -75,13 +123,13 @@ SP.order <- RES.total %>% arrange(phylum, class, order, family, genus, Taxon) %>
 
 RES.total <- RES.total %>% 
 left_join(Clef.taxa) %>% 
-  mutate(Validity =  ifelse(Taxon %in% c("Leptodiaptomus minutus", "Caprella unica", "Alcyonidium mamillatum",  "Parasmittina jeffreysi", "Catablema multicirratum", "Serripes laperousii", "Halichondria coerulea", "Polyarthra dolichoptera"), "Unlikely",
+  mutate(Validity.new =  ifelse(Taxon %in% c("Leptodiaptomus minutus", "Caprella unica", "Alcyonidium mamillatum",  "Parasmittina jeffreysi", "Catablema multicirratum", "Serripes laperousii", "Halichondria coerulea", "Polyarthra dolichoptera"), "Unlikely",
                             ifelse(DB == "NCBI_nt", "Likely",
-                                   Validity)),
-         Validity = factor(Validity, levels = c("Sufficient data", "BIN sharing","Insufficient data", "Likely", "Unlikely" )),
+                                   Validity.new)),
+         Validity.new = factor(Validity.new, levels = c("Reliable",  "Unreliable due to BIN sharing","Unreliable due to gaps",   "Likely", "Unlikely" )),
          Taxon = factor(Taxon, levels = SP.order))
 
-
+#RES.total  %>% View()
 # Real data - ESV level  -------------------------------------------------------------
 
 # The number of ESV assigned to a taxon, for each method
@@ -161,12 +209,12 @@ figESV
 
 figSPa <- RES.total %>%  filter(Levels == "species") %>% 
   left_join(ESV.reads %>% select(QueryAccVer = ID, Nreads.tot)) %>% #View()
-  group_by(Phylum, Taxon,method.threshold, Validity, DB) %>% summarise(Ntot = sum(Nreads.tot)) %>% 
+  group_by(Phylum, Taxon,method.threshold, Validity.new, DB) %>% summarise(Ntot = sum(Nreads.tot)) %>% 
   filter(#met.com %in% c("IDtaxa 60", "LCA 97", "Top hit 97"),
     Ntot > 0) %>% 
   mutate(Taxon = factor(Taxon, levels = SP.order),
          DB = DB %>% str_replace("_", "-")) %>%
-  ggplot(aes(x = method.threshold, y = Taxon, fill = Validity)) + 
+  ggplot(aes(x = method.threshold, y = Taxon, fill = Validity.new)) + 
   geom_bin2d(col = "gray") +
   labs(x="", y="") +
   #  scale_fill_manual(name = "Species detection category", 
@@ -194,13 +242,13 @@ figSPa
 
 figSPb <- RES.total %>%   filter(Levels == "species") %>% 
   left_join(ESV.reads %>% select(QueryAccVer = ID, Nreads.tot)) %>% #View()  group_by(Phylum, Taxon,met.com, Validity, DB) %>% 
-  group_by(method.threshold, Validity, DB, Taxon) %>%  
+  group_by(method.threshold, Validity.new, DB, Taxon) %>%  
   summarise(Ntot = sum(Nreads.tot)) %>% 
   filter(Ntot > 0) %>% 
-   group_by(method.threshold, Validity, DB) %>% 
+   group_by(method.threshold, Validity.new, DB) %>% 
   summarise(Ndetect = length(unique(Taxon))) %>% 
   mutate(DB = DB %>% str_replace("_", "-")) %>% 
-  ggplot(aes(x = method.threshold, y = Ndetect, fill = Validity)) + 
+  ggplot(aes(x = method.threshold, y = Ndetect, fill = Validity.new)) + 
   geom_bar(stat = "identity", position = position_stack(reverse = TRUE)) +
   #geom_hline(yintercept = c(68, 72)) +
   labs(y="N species detected", x="") +
@@ -230,18 +278,19 @@ RES.total %>% pull(assigner) %>% unique()
 figSPc <- RES.total %>% filter(Levels == "species") %>% 
   left_join(ESV.reads %>% select(QueryAccVer = ID, Nreads.tot)) %>% #View()  group_by(Phylum, Taxon, Validity, DB) %>% 
   
-  filter(assigner %in% c("IDtaxa 40", "Top hit 95")) %>% 
-  group_by(Phylum, Taxon, Validity, DB) %>% 
+  filter(assigner %in% c("IDtaxa 40", "Top hit 95"),
+         !(method.threshold == "Top hit 95" & DB == "GSL_rl")) %>% 
+  group_by(Phylum, Taxon, Validity.new, DB) %>% 
   summarise(Ntot = sum(Nreads.tot)) %>% 
   filter(Ntot > 0) %>% 
   mutate(Taxon = factor(Taxon, levels = SP.order),
-         Validity = as.character(Validity)) %>%
+         Validity.new = as.character(Validity.new)) %>%
   select(-Ntot) %>% 
-  pivot_wider(names_from = DB, values_from = Validity, values_fill = "No assigments") %>%  
+  pivot_wider(names_from = DB, values_from = Validity.new, values_fill = "No assigments") %>%  
   group_by(`NCBI_nt`,`GSL_rl`) %>% 
   summarise(N = n()) %>% 
   mutate(`NCBI_nt` = factor(`NCBI_nt`, levels = c("Likely", "Unlikely", "No assigments" )),
-         `GSL_rl` = factor(`GSL_rl`, levels = c("Sufficient data", "BIN sharing","Insufficient data", "No assigments" )))  %>% 
+         `GSL_rl` = factor(`GSL_rl`, levels = c("Reliable",  "Unreliable due to BIN sharing","Unreliable due to gaps", "No assigments" )))  %>% 
   complete(`NCBI_nt`,`GSL_rl`) %>% 
   
   ggplot(aes(x = `NCBI_nt`, y = `GSL_rl`, fill = N)) + 
@@ -295,15 +344,25 @@ ggsave(filename = file.path(here::here(), "03_Results", "fig_Assignement_SP.png"
        plot = figSP2, width = 8, height = 9, units = "in", bg = "white")
 
 
-# Stats
+# Stats - Number of unique species
 RES.total %>%   filter( Levels == "species") %>%# head()
   left_join(ESV.reads %>% select(QueryAccVer = ID, Nreads.tot)) %>% 
-  group_by(Phylum, Taxon,method.threshold, method, Validity, DB) %>% summarise(Ntot = sum(Nreads.tot)) %>% 
+  group_by(Phylum, Taxon,method.threshold, method, Validity.new, DB) %>% summarise(Ntot = sum(Nreads.tot)) %>% 
   filter(Ntot > 0) %>% 
   mutate(Taxon = factor(Taxon, levels = SP.order)) %>%
   group_by(DB) %>% summarise(N = length(unique(Taxon)))
 
 
+RES.total %>%   filter(Levels == "species") %>% 
+  left_join(ESV.reads %>% select(QueryAccVer = ID, Nreads.tot)) %>% #View()  group_by(Phylum, Taxon,met.com, Validity, DB) %>% 
+  group_by(method.threshold, Validity.new, DB, Taxon) %>%  
+  summarise(Ntot = sum(Nreads.tot)) %>% 
+  filter(Ntot > 0) %>% 
+  group_by(DB, method.threshold, Validity.new) %>% 
+  summarise(Ndetect = length(unique(Taxon))) %>% 
+  mutate(Ntotal = sum(Ndetect),
+         freq = Ndetect / Ntotal) %>% 
+  filter(Validity.new == "Unlikely")
 
 # NCBI Blast over GSL - Dataset ---------------------------------------------------------
 
@@ -376,13 +435,23 @@ RES.NCBI.test %>% group_by(method, threshold, Levels.group) %>% summarise(N = n(
 
 RES.NCBI.test %>% group_by(method, threshold, Taxo.group, Levels.group) %>% summarise(N = n()) %>%
   mutate(freq = N / sum(N)) %>% 
-  filter(Levels.group == "species", threshold == 97) %>% 
+  filter(Levels.group == "genus", threshold == 97) %>% 
   arrange(method, freq)
 
+# Range of accuracy (fig3A)
 RES.NCBI.test  %>%  group_by(method, threshold, Levels.group, Similar) %>% summarise(N = n()) %>%
   mutate(freq = N / sum(N)) %>%
-  filter(Similar == "Wrong identification", Levels.group == "genus") %>% 
-  group_by(method) %>% 
+  filter(Similar == "Right identification", Levels.group %in% c("species","genus")) %>% 
+  group_by(Levels.group, method) %>% 
+  summarise(min = min(freq),
+            max = max(freq))
+
+# Range of accuracy (fig3B)
+RES.NCBI.test  %>% filter( Levels.group == "genus", threshold == 97) %>% 
+  group_by(method, threshold, Levels.group,  Taxo.group, Similar) %>% summarise(N = n()) %>%
+  mutate(freq = N / sum(N)) %>%
+  filter(Similar == "Right identification", Levels.group %in% c("species","genus"), threshold == 97) %>% 
+  group_by(Levels.group, method) %>% 
   summarise(min = min(freq),
             max = max(freq))
 
