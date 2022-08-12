@@ -75,7 +75,7 @@ Taxa.Seq.final
 #View(Taxa.Seq.final )
 
 Validity.df <- data.frame(Validity =  c("Sufficient data", "BIN sharing", "Insufficient data", "No genetic data"),
-                          Validity.new = c("Reliable",  "Unreliable due to BIN sharing", "Unreliable due to gaps","No sequences available"))
+                          Validity.new = c("Reliable",  "Unreliable - BIN sharing", "Unreliable - gaps","No sequences available"))
 
 Taxa.Seq.final <- Taxa.Seq.final %>% 
   left_join(Validity.df) %>% 
@@ -86,7 +86,7 @@ Taxa.Seq.final <- Taxa.Seq.final %>%
   Taxo.group = factor(Taxo.group, levels = c("Rotifera","Cnidaria<br>Porifera", "Bryozoa", "Annelida<br>Brachipoda<br>Nemertea", "Mollusca", "Echinodermata", "Arthropoda", "Chordata" )),
   
   Validity = factor(Validity, levels = c("Sufficient data", "BIN sharing", "Insufficient data", "No genetic data")),
-  Validity.new = factor(Validity.new, levels = c("Reliable",  "Unreliable due to BIN sharing","Unreliable due to gaps", "No sequences available")),
+  Validity.new = factor(Validity.new, levels = c("Reliable",  "Unreliable - BIN sharing","Unreliable - gaps", "No sequences available")),
   Phylum = factor(phylum, levels = c("Rotifera","Cnidaria", "Porifera", "Bryozoa", "Annelida", "Brachiopoda", "Sipuncula", "Nemertea", "Mollusca", "Echinodermata", "Arthropoda", "Chordata" ))
 )
 
@@ -126,7 +126,7 @@ left_join(Clef.taxa) %>%
   mutate(Validity.new =  ifelse(Taxon %in% c("Leptodiaptomus minutus", "Caprella unica", "Alcyonidium mamillatum",  "Parasmittina jeffreysi", "Catablema multicirratum", "Serripes laperousii", "Halichondria coerulea", "Polyarthra dolichoptera"), "Unlikely",
                             ifelse(DB == "NCBI_nt", "Likely",
                                    Validity.new)),
-         Validity.new = factor(Validity.new, levels = c("Reliable",  "Unreliable due to BIN sharing","Unreliable due to gaps",   "Likely", "Unlikely" )),
+         Validity.new = factor(Validity.new, levels = c("Reliable",  "Unreliable - BIN sharing","Unreliable - gaps",   "Likely", "Unlikely" )),
          Taxon = factor(Taxon, levels = SP.order))
 
 #RES.total  %>% View()
@@ -256,7 +256,7 @@ figSPb <- RES.total %>%   filter(Levels == "species") %>%
   #                    values = c("cornflowerblue", "darkslategray1", "darkgoldenrod1" , "deepskyblue1", "brown1"))+
   #scale_fill_manual(name = "Species detection category", 
   #                  values = c("cornflowerblue", "darkorchid", "darkgoldenrod1" , "cornflowerblue", "brown1"))+
-  scale_fill_manual(name = "Species detection category", 
+  scale_fill_manual(name = "Species rank", 
                     values = c(colorBlindBlack8[4], colorBlindBlack8[5], colorBlindBlack8[2], colorBlindBlack8[3], colorBlindBlack8[7]))+
   
   guides(fill=guide_legend(ncol=2,byrow=F)) +
@@ -278,8 +278,8 @@ RES.total %>% pull(assigner) %>% unique()
 figSPc <- RES.total %>% filter(Levels == "species") %>% 
   left_join(ESV.reads %>% select(QueryAccVer = ID, Nreads.tot)) %>% #View()  group_by(Phylum, Taxon, Validity, DB) %>% 
   
-  filter(assigner %in% c("IDtaxa 40", "Top hit 95"),
-         !(method.threshold == "Top hit 95" & DB == "GSL_rl")) %>% 
+ # filter(assigner %in% c("IDtaxa 40", "Top hit 95"),
+  #       !(method.threshold == "Top hit 95" & DB == "GSL_rl")) %>% 
   group_by(Phylum, Taxon, Validity.new, DB) %>% 
   summarise(Ntot = sum(Nreads.tot)) %>% 
   filter(Ntot > 0) %>% 
@@ -290,7 +290,7 @@ figSPc <- RES.total %>% filter(Levels == "species") %>%
   group_by(`NCBI_nt`,`GSL_rl`) %>% 
   summarise(N = n()) %>% 
   mutate(`NCBI_nt` = factor(`NCBI_nt`, levels = c("Likely", "Unlikely", "No assigments" )),
-         `GSL_rl` = factor(`GSL_rl`, levels = c("Reliable",  "Unreliable due to BIN sharing","Unreliable due to gaps", "No assigments" )))  %>% 
+         `GSL_rl` = factor(`GSL_rl`, levels = c("Reliable",  "Unreliable - BIN sharing","Unreliable - gaps", "No assigments" )))  %>% 
   complete(`NCBI_nt`,`GSL_rl`) %>% 
   
   ggplot(aes(x = `NCBI_nt`, y = `GSL_rl`, fill = N)) + 
@@ -309,6 +309,47 @@ figSPc <- RES.total %>% filter(Levels == "species") %>%
         #panel.grid = element_blank()
   ) #+ coord_flip()
 figSPc
+
+
+figSPc.v2 <- RES.total %>% filter(Levels == "species") %>% 
+  left_join(ESV.reads %>% select(QueryAccVer = ID, Nreads.tot)) %>% #View()  group_by(Phylum, Taxon, Validity, DB) %>% 
+  
+  # filter(assigner %in% c("IDtaxa 40", "Top hit 95"),
+  #       !(method.threshold == "Top hit 95" & DB == "GSL_rl")) %>% 
+  group_by(Phylum, Taxon, Validity.new, DB) %>% 
+  summarise(Ntot = sum(Nreads.tot)) %>% 
+  filter(Ntot > 0) %>% 
+  mutate(Taxon = factor(Taxon, levels = SP.order),
+         Validity.new = as.character(Validity.new)) %>%
+  select(-Ntot) %>% 
+  pivot_wider(names_from = DB, values_from = Validity.new, values_fill = "No assigments") %>%  
+  group_by(`NCBI_nt`,`GSL_rl`) %>% 
+  summarise(N = n()) %>% 
+  mutate(`NCBI_nt` = factor(`NCBI_nt`, levels = c("Likely", "Unlikely", "No assigments" )),
+         `GSL_rl` = factor(`GSL_rl`, levels = c("Reliable",  "Unreliable - BIN sharing","Unreliable - gaps", "No assigments" )))  %>% 
+  complete(`NCBI_nt`,`GSL_rl`) %>% 
+  
+  ggplot(aes(x = `NCBI_nt`, y = `GSL_rl`, fill = N)) + 
+  geom_bin2d(col = "black")  +
+  geom_text(aes(label = N), size = 3) +
+  scale_fill_gradient(low = "gray90", high = "gray50", na.value = "white") +
+  scale_y_discrete(labels = function(x) 
+    stringr::str_wrap(x, width = 15))+
+  scale_x_discrete(labels = function(x) 
+    stringr::str_wrap(x, width = 15))+
+  labs(x ="NCBI-nt", y = "GSL-rl") +
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, size = 8),
+        axis.text.y = element_text( size = 8, vjust = 0.5),
+        axis.ticks.y = element_blank(),
+        strip.text.y = element_text(angle = 0, size = 8), 
+        panel.spacing.y=unit(0.1, "lines"),
+        legend.position = "none",
+        legend.text = element_text(size = 8)#,
+        #panel.grid = element_blank()
+  ) #+ coord_flip()
+figSPc.v2
+
 
 
 figSP <- ggpubr::ggarrange(ggarrange(figSPb + theme(legend.position = "none"),
@@ -340,8 +381,24 @@ figSP2 <- ggpubr::ggarrange(figSPa + theme(legend.position = "none"),
 
 figSP2
 
-ggsave(filename = file.path(here::here(), "03_Results", "fig_Assignement_SP.png"), 
-       plot = figSP2, width = 8, height = 9, units = "in", bg = "white")
+# EN changeant 3c
+figSP2.v2 <- ggpubr::ggarrange(figSPa + theme(legend.position = "none"), 
+                            ggarrange(figSPb + theme(legend.position = "none"),
+                                      
+                                      figSPc.v2,
+                                      get_legend(figSPb),
+                                      labels = c("B", "C", ""),
+                                      nrow =3, heights = c(3,3,2)), 
+                            
+                            # bar plot spaning two columns                       # box plot and scatter plot
+                            labels = c("A", ""),
+                            ncol = 2, nrow = 1, widths = c(5,3), 
+                            common.legend = F)
+
+figSP2.v2
+
+#ggsave(filename = file.path(here::here(), "03_Results", "fig_Assignement_SP_v2.png"), 
+#       plot = figSP2.v2, width = 8, height = 9, units = "in", bg = "white")
 
 
 # Stats - Number of unique species
@@ -377,11 +434,15 @@ RES.NCBI.test <- read_csv(file.path(here::here(), "01_Raw_data", "MS_NCBI.TestAs
 
 
 RES.NCBI.test <-RES.NCBI.test %>% filter(str_ends(Taxon.ori, " sp", negate = T)) %>% 
-  mutate(Taxo.group = ifelse(Phylum.ori %in% c("Sipuncula", "Nemertea", "Brachiopoda", "Annelida"), "Annelida<br>Brachipoda<br>Nemertea",
+  mutate(Taxo.group = ifelse(Phylum.ori %in% c("Sipuncula", "Nemertea", "Brachiopoda", "Annelida"), "Annelida<br>Brachiopoda<br>Nemertea",
                              ifelse(Phylum.ori %in% c("Porifera", "Cnidaria"), "Cnidaria<br>Porifera", Phylum.ori)),
-         Taxo.group = factor(Taxo.group, levels = c("Cnidaria<br>Porifera", "Annelida<br>Brachipoda<br>Nemertea", "Mollusca", "Arthropoda",  "Echinodermata","Chordata" )),
+         Taxo.group = factor(Taxo.group, levels = c("Cnidaria<br>Porifera", "Annelida<br>Brachiopoda<br>Nemertea", "Mollusca", "Arthropoda",  "Echinodermata","Chordata" )),
          Levels.group = ifelse(Levels %in% c("order", "phylum", "family", "class", "kingdom", "Unassigned"), "> genus or unassigned", Levels),
          Levels.group = factor(Levels.group, levels = c("species", "genus", "> genus or unassigned")),    
+         
+         Levels.group2 = ifelse(Levels %in% c("order", "phylum", "family", "class", "kingdom"), "> genus", Levels),
+         Levels.group2 = factor(Levels.group2, levels = c("species", "genus", "> genus", "Unassigned")),    
+         
          #Similar = ifelse(Taxon.ori == Taxon & Levels == "species", "Right species identification",
           #                ifelse(Levels == "species", "Wrong identification at species levels",
           #                       ifelse(Genus.ori == genus & Levels == "genus", "Right genus identification",
@@ -435,7 +496,7 @@ RES.NCBI.test %>% group_by(method, threshold, Levels.group) %>% summarise(N = n(
 
 RES.NCBI.test %>% group_by(method, threshold, Taxo.group, Levels.group) %>% summarise(N = n()) %>%
   mutate(freq = N / sum(N)) %>% 
-  filter(Levels.group == "genus", threshold == 97) %>% 
+  filter(Levels.group == "species", threshold == 97) %>% 
   arrange(method, freq)
 
 # Range of accuracy (fig3A)
@@ -447,7 +508,7 @@ RES.NCBI.test  %>%  group_by(method, threshold, Levels.group, Similar) %>% summa
             max = max(freq))
 
 # Range of accuracy (fig3B)
-RES.NCBI.test  %>% filter( Levels.group == "genus", threshold == 97) %>% 
+RES.NCBI.test  %>% filter( Levels.group == "species", threshold == 97) %>% 
   group_by(method, threshold, Levels.group,  Taxo.group, Similar) %>% summarise(N = n()) %>%
   mutate(freq = N / sum(N)) %>%
   filter(Similar == "Right identification", Levels.group %in% c("species","genus"), threshold == 97) %>% 
@@ -477,7 +538,7 @@ grapha <-RES.NCBI.test %>% filter(threshold == 97) %>%
   
   facet_grid(. ~Taxo.group , scale = "free") + 
   xlab("") +
-  ylab(expression(paste("Proportion of assigments"))) +  theme_bw() + 
+  ylab(expression(paste("Prop. of assigments"))) +  theme_bw() + 
   theme_bw() + 
   
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
@@ -487,8 +548,78 @@ grapha <-RES.NCBI.test %>% filter(threshold == 97) %>%
 
 grapha
 
+grapha.all <-RES.NCBI.test %>% filter(threshold == 97) %>% 
+  group_by(method, threshold, Taxo.group, Levels.group2) %>% summarise(N = n()) %>%
+  mutate(freq = N / sum(N),
+         Levels.group2 = factor(Levels.group2, levels =  c("Unassigned", "> genus", "genus",  "species"))) %>% #View()
+  #filter(Levels %in% c("species", "genus")) %>% 
+  ggplot(aes(y=freq, x = method, fill = Levels.group2)) +
+  #geom_point(position=position_dodge(width=0.3), size = 3) +
+  scale_y_continuous(limits = c(0,1)) +
+  geom_bar(stat= "identity",col = "darkgray") +
+  scale_fill_manual(values = c("gray15","gray60", "gray90", "white"), limits = c("species","genus",  "> genus", "Unassigned"))+
+  
+  facet_grid(. ~Taxo.group , scale = "free") + 
+  xlab("") +
+  ylab(expression(paste("Prop. of assigments"))) +  theme_bw() + 
+  theme_bw() + 
+  
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+        legend.position = "bottom",
+        strip.text = element_markdown(),
+        legend.title = element_blank())
 
-grapha.acc <- RES.NCBI.test %>% filter(threshold == 97) %>% 
+grapha.all
+
+grapha.sp <-RES.NCBI.test %>% filter(threshold == 97
+                                     ) %>% 
+  group_by(method, threshold, Taxo.group, Levels.group2) %>% summarise(N = n()) %>%
+  mutate(freq = N / sum(N),
+         Levels.group2 = factor(Levels.group2, levels =  c("Unassigned", "> genus", "genus",  "species"))) %>% #View()
+  filter(Levels.group2 %in% c("species")) %>% 
+  ggplot(aes(y=freq, x = method, fill = Levels.group2)) +
+  #geom_point(position=position_dodge(width=0.3), size = 3) +
+  scale_y_continuous(limits = c(0,1)) +
+  geom_bar(stat= "identity",col = "darkgray") +
+  scale_fill_manual(values = c("gray15","gray60", "gray90", "white"), limits = c("species","genus",  "> genus", "Unassigned"))+
+  
+  facet_grid(. ~Taxo.group , scale = "free") + 
+  xlab("") +
+  ylab(expression(paste("Prop. of assigments"))) +  theme_bw() + 
+  theme_bw() + 
+  
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+        legend.position = "bottom",
+        strip.text = element_markdown(),
+        legend.title = element_blank())
+
+grapha.sp
+
+grapha.gn <-RES.NCBI.test %>% filter(threshold == 97
+) %>% 
+  group_by(method, threshold, Taxo.group, Levels.group2) %>% summarise(N = n()) %>%
+  mutate(freq = N / sum(N),
+         Levels.group2 = factor(Levels.group2, levels =  c("Unassigned", "> genus", "genus",  "species"))) %>% #View()
+  filter(Levels.group2 %in% c("species", "genus")) %>% 
+  ggplot(aes(y=freq, x = method, fill = Levels.group2)) +
+  #geom_point(position=position_dodge(width=0.3), size = 3) +
+  scale_y_continuous(limits = c(0,1)) +
+  geom_bar(stat= "identity",col = "darkgray") +
+  scale_fill_manual(values = c("gray15","gray60"), limits = c("species","genus"))+
+  
+  facet_grid(. ~Taxo.group , scale = "free") + 
+  xlab("") +
+  ylab(expression(paste("Prop. of assigments"))) +  theme_bw() + 
+  theme_bw() + 
+  
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+        legend.position = "bottom",
+        strip.text = element_markdown(),
+        legend.title = element_blank())
+
+grapha.gn
+
+grapha.acc.gn <- RES.NCBI.test %>% filter(threshold == 97) %>% 
   group_by(method, threshold, Taxo.group, Levels.group) %>% summarise(Nok = length(SeqName[Similar == "Right identification"]),
                                                                       N = n()) %>%
   mutate(freq = Nok / sum(N),
@@ -500,10 +631,10 @@ grapha.acc <- RES.NCBI.test %>% filter(threshold == 97) %>%
   scale_y_continuous(limits = c(0,1)) +
   geom_bar(stat= "identity", col = "darkgray")+
   #geom_bar(stat= "identity",col = "darkgray", position = position_fill(reverse = TRUE)) +
-  scale_fill_manual(values = c("gray15", "gray60", "gray95"), limits = c("species","genus",  "> genus or unassigned"))+
+  scale_fill_manual(values = c("gray15", "gray60"), limits = c("species","genus"))+
   facet_grid(. ~Taxo.group , scale = "free") + 
   xlab("") +
-  ylab(expression(paste("Proportion of accurate assigments"))) +  theme_bw() + 
+  ylab(expression(paste("Prop. of accurate assigments"))) +  theme_bw() + 
   theme_bw() + 
   
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
@@ -511,7 +642,37 @@ grapha.acc <- RES.NCBI.test %>% filter(threshold == 97) %>%
         strip.text = element_markdown(),
         legend.title = element_blank())
 
-grapha.acc
+grapha.acc.gn
+
+
+grapha.acc.sp <- RES.NCBI.test %>% filter(threshold == 97) %>% 
+  group_by(method, threshold, Taxo.group, Levels.group) %>% summarise(Nok = length(SeqName[Similar == "Right identification"]),
+                                                                      N = n()) %>%
+  mutate(freq = Nok / sum(N),
+         Levels.group = factor(Levels.group, levels =  c("> genus or unassigned", "genus", "species"))) %>% #View()
+  filter(Levels.group %in% c("species")) %>% 
+  # filter(Similar == "Right identification") %>% 
+  ggplot(aes(y=freq, x = method, fill = Levels.group)) +
+  #geom_point(position=position_dodge(width=0.3), size = 3) +
+  scale_y_continuous(limits = c(0,1)) +
+  geom_bar(stat= "identity", col = "darkgray")+
+  #geom_bar(stat= "identity",col = "darkgray", position = position_fill(reverse = TRUE)) +
+  scale_fill_manual(values = c("gray15", "gray60", "gray95"), limits = c("species","genus",  "> genus or unassigned"))+
+  facet_grid(. ~Taxo.group , scale = "free") + 
+  xlab("") +
+  ylab(expression(paste("Prop. of accurate assigments"))) +  theme_bw() + 
+  theme_bw() + 
+  
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+        legend.position = "bottom",
+        strip.text = element_markdown(),
+        legend.title = element_blank())
+
+grapha.acc.sp
+
+
+
+
 
 # 
 graphb <-RES.NCBI.test %>% filter(Levels %in% c("species", "genus"),
@@ -519,7 +680,8 @@ graphb <-RES.NCBI.test %>% filter(Levels %in% c("species", "genus"),
   group_by(method, threshold, Taxo.group, Levels.group, Similar) %>% summarise(N = n()) %>%
   mutate(freq = N / sum(N)) %>% 
          #Levels.group = factor(Levels.group, levels =  c("> genus or unassigned", "genus", "species"))) %>% #View()
-  filter(Similar != "Wrong identification") %>% 
+  filter(Similar != "Wrong identification",
+         Levels.group == "species") %>% 
   ggplot(aes(y=freq, x = method, fill = Levels.group, group = Levels.group)) +
   #geom_point(position=position_dodge(width=0.3), size = 3) +
   #scale_y_continuous(limits = c(0,0.15)) +
@@ -543,7 +705,7 @@ grapha.over <- RES.NCBI.test %>%
   mutate(freq = N / sum(N),
          threshold = factor(threshold),
          Levels.group = factor(Levels.group, levels =  c("> genus or unassigned", "genus", "species"))) %>% #View()
-  #filter(Levels %in% c("species", "genus")) %>% 
+  filter(Levels.group %in% c("species")) %>% 
   ggplot(aes(y=freq, x = threshold, fill = Levels.group)) +
   #geom_point(position=position_dodge(width=0.3), size = 3) +
   scale_y_continuous(limits = c(0,1)) +
@@ -552,7 +714,7 @@ grapha.over <- RES.NCBI.test %>%
   
   facet_grid(. ~method.graph , scale = "free") + 
   xlab("") +
-  ylab(expression(paste("Proportion of assigments"))) +  theme_bw() + 
+  ylab(expression(paste("Prop. of assigments"))) +  theme_bw() + 
   theme_bw() + 
   
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
@@ -568,7 +730,7 @@ grapha.acc.over <- RES.NCBI.test %>%
   mutate(freq = Nok / sum(N),
          threshold = factor(threshold),
          Levels.group = factor(Levels.group, levels =  c("> genus or unassigned", "genus", "species"))) %>% #View()
-  #filter(Levels %in% c("species", "genus")) %>% 
+  filter(Levels.group %in% c("species")) %>% 
   ggplot(aes(y=freq, x = threshold, fill = Levels.group)) +
   #geom_point(position=position_dodge(width=0.3), size = 3) +
   scale_y_continuous(limits = c(0,1)) +
@@ -577,7 +739,7 @@ grapha.acc.over <- RES.NCBI.test %>%
   
   facet_grid(. ~method.graph , scale = "free") + 
   xlab("") +
-  ylab(expression(paste("Proportion of accurate assigments"))) +  theme_bw() + 
+  ylab(expression(paste("Prop. of accurate assigments"))) +  theme_bw() + 
   theme_bw() + 
   
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
@@ -588,12 +750,16 @@ grapha.acc.over <- RES.NCBI.test %>%
 grapha.acc.over
 
 
+
+
+
 graphb.over <- RES.NCBI.test %>% filter(Levels %in% c("species", "genus")) %>% 
     group_by(method.graph, threshold, Levels.group, Similar) %>% summarise(N = n()) %>%
   mutate(freq = N / sum(N),
          threshold = factor(threshold)) %>% 
         # Levels.group = factor(Levels.group, levels =  c("> genus or unassigned", "genus", "species"))) %>% #View()
-  filter(Similar != "Wrong identification") %>% 
+  filter(Similar != "Wrong identification",
+         Levels.group %in% c("species")) %>% 
   ggplot(aes(y=freq, x = threshold, fill = Levels.group, group = Levels.group)) +
   #geom_point(position=position_dodge(width=0.3), size = 3) +
   #scale_y_continuous(limits = c(,1)) +
@@ -609,9 +775,6 @@ graphb.over <- RES.NCBI.test %>% filter(Levels %in% c("species", "genus")) %>%
         legend.title = element_blank())
 
 graphb.over
-
-
-
 
 graphc.over <- RES.NCBI.test %>% 
   group_by(method.graph, threshold, Levels.group, Similar) %>% summarise(N = n()) %>%
@@ -698,7 +861,7 @@ graphd <- RES.postONncbi %>% filter(str_ends(Taxon.ori, " sp", negate = T),
   #scale_fill_manual(values = c("gray15", "gray60", "gray95"))+
   facet_grid(. ~ Taxo.group , scale = "free") + 
   xlab("") +
-  ylab(expression(paste("Proportion of accurate assigments"))) +  theme_bw() + 
+  ylab(expression(paste("Prop. of accurate assigments"))) +  theme_bw() + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
         legend.position = "bottom",
         strip.text = element_markdown(),
@@ -737,7 +900,7 @@ graphd.over <- RES.postONncbi %>% filter(str_ends(Taxon.ori, " sp", negate = T)
   #scale_fill_manual(values = c("gray15", "gray60", "gray95"))+
   facet_grid(. ~ method , scale = "free") + 
   xlab("") +
-  ylab(expression(paste("Proportion of accurate assigments"))) +  theme_bw() + 
+  ylab(expression(paste("Prop. of accurate assigments"))) +  theme_bw() + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
         legend.position = "bottom",
         strip.text = element_markdown(),
@@ -752,6 +915,14 @@ ggarrange(graphd.over, graphd,
 )
 
 
+ggarrange(grapha.acc.over, grapha.acc.sp,
+          labels = c("A", "B"),
+          nrow = 1, ncol = 2, widths = c(2,5), align = "hv",
+          common.legend = TRUE, legend = "bottom"
+)
+
+
+
 graph.comparaison <- ggarrange(grapha.over, grapha,
           graphb.over, graphb,
           #graphc.over, graphc,
@@ -761,15 +932,197 @@ graph.comparaison <- ggarrange(grapha.over, grapha,
 )
 graph.comparaison
 
-graph.comparaison.v2 <- ggarrange(grapha.over, grapha,
-                               graphb.over, graphb,
-                               grapha.acc.over, grapha.acc,
+library(ggbreak) 
+
+graphb.over + scale_y_cut(c(0.9), which = c(1,2),  scales = c(1,2)) + scale_y_continuous(limits = c(0,1))
+
+graph.comparaison.v2 <- ggarrange(grapha.over, grapha.sp,
+                               print(graphb.over + scale_y_cut(c(0.88), which = c(1,2),  scales = c(2,1),space = 0.1) + 
+                                       scale_y_continuous(limits = c(0,1), breaks = c(0, .4, .80,.92,0.96,1)) +
+                                       theme(legend.position = "none")), 
+                               print(graphb + scale_y_cut(c(0.88), which = c(1,2),  scales = c(2,1), space = 0.1) + 
+                                       scale_y_continuous(limits = c(0,1), breaks = c(0, .4, .80,.92,0.96,1))+
+                                 theme(legend.position = "none")),
+                               grapha.acc.over, grapha.acc.sp,
                                #graphc.over, graphc,
                                labels =  LETTERS[1:6],
                                nrow = 3, ncol = 2, widths = c(2,5), align = "hv",
-                               common.legend = TRUE, legend = "bottom"
+                               common.legend = TRUE, legend = "none"
 )
 graph.comparaison.v2
 
-ggsave(filename = file.path(here::here(), "03_Results", "fig_NCBI_tests.png"), 
-       plot = graph.comparaison.v2, width = 9, height = 10, units = "in", bg = "white")
+graph.comparaison.v3 <- ggarrange(grapha.over, grapha.sp,
+                                  graphb.over  +# geom_line(col = "darkgray") +  geom_point() +
+                                          #scale_y_continuous(limits = c(0.85,1)) +
+                                          theme(legend.position = "none"), 
+                                  graphb, #+ geom_line(col = "darkgray") +  geom_point() +
+                                    #scale_y_continuous(limits = c(0.85,1)),
+                                  grapha.acc.over, grapha.acc.sp,
+                                  #graphc.over, graphc,
+                                  labels =  LETTERS[1:6],
+                                  nrow = 3, ncol = 2, widths = c(2,5), align = "hv",
+                                  common.legend = TRUE, legend = "none"
+)
+graph.comparaison.v3
+
+
+#ggsave(filename = file.path(here::here(), "03_Results", "fig_NCBI_tests_sp.png"), 
+#       plot = graph.comparaison.v2, width = 9, height = 10, units = "in", bg = "white")
+
+
+# NEW VERSION
+
+grapha.acc.over <- RES.NCBI.test %>% 
+  group_by(method.graph, threshold, Levels.group) %>%  summarise(Nok = length(SeqName[Similar == "Right identification"]),
+                                                                 Nnotok = length(SeqName[Similar != "Right identification"]),
+                                                                 N = n()) %>%
+  mutate(freqOK = Nok / sum(N),
+         freqnotOK = Nnotok / sum(N),
+         threshold = factor(threshold),
+         Levels.group = factor(Levels.group, levels =  c("> genus or unassigned", "genus", "species"))) %>% #View()
+  filter(Levels.group %in% c("species")) %>%
+  pivot_longer(cols = c(freqOK, freqnotOK), values_to = "freq") %>% 
+  # filter(Similar == "Right identification") %>% 
+  ggplot(aes(y=freq, x = threshold, fill = name)) +
+  #geom_point(position=position_dodge(width=0.3), size = 3) +
+  scale_y_continuous(limits = c(0,1)) +
+  geom_bar(stat= "identity", col = "black")+
+  #geom_bar(stat= "identity",col = "darkgray", position = position_fill(reverse = TRUE)) +
+  scale_fill_manual(values = c("gray60", "gray95"), labels = c("Inaccurate", "Accurate") )+
+  
+  facet_grid(. ~method.graph , scale = "free") + 
+  xlab("") +
+  ylab(expression(paste("Prop. of assigments"))) +  theme_bw() + 
+  theme_bw() + 
+  
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+        legend.position = "bottom",
+        strip.text = element_markdown(),
+        legend.title = element_blank())
+
+grapha.acc.over
+
+
+grapha.acc.sp <- RES.NCBI.test %>% filter(threshold == 97) %>% 
+  group_by(method, threshold, Taxo.group, Levels.group) %>% summarise(Nok = length(SeqName[Similar == "Right identification"]),
+                                                                      Nnotok = length(SeqName[Similar != "Right identification"]),
+                                                                      N = n()) %>%
+  mutate(freqOK = Nok / sum(N),
+         freqnotOK = Nnotok / sum(N),
+         Levels.group = factor(Levels.group, levels =  c("> genus or unassigned", "genus", "species"))) %>% #View()
+  filter(Levels.group %in% c("species")) %>%
+  pivot_longer(cols = c(freqOK, freqnotOK), values_to = "freq") %>% 
+  # filter(Similar == "Right identification") %>% 
+  ggplot(aes(y=freq, x = method, fill = name)) +
+  #geom_point(position=position_dodge(width=0.3), size = 3) +
+  scale_y_continuous(limits = c(0,1)) +
+  geom_bar(stat= "identity", col = "black")+
+  #geom_bar(stat= "identity",col = "darkgray", position = position_fill(reverse = TRUE)) +
+  scale_fill_manual(values = c("gray60", "gray95"), labels = c("Inaccurate", "Accurate") )+
+  facet_grid(. ~Taxo.group , scale = "free") + 
+  xlab("") +
+  ylab(expression(paste("Prop. of assigments"))) +  theme_bw() + 
+  theme_bw() + 
+  
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+        legend.position = "bottom",
+        strip.text = element_markdown(),
+        legend.title = element_blank())
+
+grapha.acc.sp
+
+
+graphb.over <- RES.NCBI.test %>% filter(Levels %in% c("species", "genus")) %>% 
+  group_by(method.graph, threshold, Levels.group, Similar) %>% summarise(N = n()) %>%
+  mutate(freq = N / sum(N),
+         threshold = factor(threshold)) %>% 
+  # Levels.group = factor(Levels.group, levels =  c("> genus or unassigned", "genus", "species"))) %>% #View()
+  filter(Similar != "Wrong identification",
+         Levels.group %in% c("species")) %>% 
+  ggplot(aes(y=freq, x = threshold, fill = Levels.group, group = Levels.group)) +
+  #geom_point(position=position_dodge(width=0.3), size = 3) +
+  #scale_y_continuous(limits = c(,1)) +
+  #geom_point() +
+  ungeviz::geom_hpline()+
+  #geom_bar(stat= "identity", position = "dodge") +
+  scale_y_continuous(limits = c(0.87,1)) +
+   facet_grid(. ~ method.graph , scale = "free") + 
+  xlab("") +
+  ylab(expression(paste("Accuracy"))) +  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+        legend.position = "bottom",
+        strip.text = element_markdown(),
+        legend.title = element_blank())
+
+graphb.over
+
+# 
+
+devtools::install_github("wilkelab/ungeviz")
+
+library(ungeviz)
+
+graphb <-RES.NCBI.test %>% filter(Levels %in% c("species", "genus"),
+                                  threshold == 97) %>% 
+  group_by(method, threshold, Taxo.group, Levels.group, Similar) %>% summarise(N = n()) %>%
+  mutate(freq = N / sum(N)) %>% 
+  #Levels.group = factor(Levels.group, levels =  c("> genus or unassigned", "genus", "species"))) %>% #View()
+  filter(Similar != "Wrong identification",
+         Levels.group == "species") %>% 
+  ggplot(aes(y=freq, x = method, fill = Levels.group, group = Levels.group)) +
+  #geom_point(position=position_dodge(width=0.3), size = 3) +
+  #scale_y_continuous(limits = c(0,0.15)) +
+  #geom_bar(stat= "identity", position = "dodge") +
+  ungeviz::geom_hpline()+
+  scale_y_continuous(limits = c(0.87,1)) +
+  scale_shape_manual(values = c(21,22))+
+  scale_fill_manual(values = c("gray15", "gray60", "gray95"), limits = c("species","genus",  "> genus or unassigned"))+
+  
+  facet_grid(. ~ Taxo.group , scale = "free") + 
+  xlab("") +
+  ylab(expression(paste("Accuracy"))) +  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+        legend.position = "bottom",
+        strip.text = element_markdown(),
+        legend.title = element_blank())
+
+graphb 
+
+
+fig2.v1 <- ggarrange(grapha.acc.over, grapha.acc.sp,
+          labels = c("A", "B"),
+          nrow = 1, ncol = 2, widths = c(2,5), align = "hv",
+          common.legend = TRUE, legend = "bottom"
+)
+
+fig2.v2 <- ggarrange(grapha.acc.over, grapha.acc.sp,
+          graphb.over, graphb, 
+          labels = LETTERS,
+          nrow = 2, ncol = 2, widths = c(2,5), align = "hv",
+          common.legend = TRUE, legend = "bottom"
+)
+
+fig2.v1
+fig2.v2
+
+
+#ggsave(filename = file.path(here::here(), "03_Results", "fig2_v1.png"), 
+#       plot = fig2.v1, width = 9, height = 4, units = "in", bg = "white")
+
+#ggsave(filename = file.path(here::here(), "03_Results", "fig2_v2.png"), 
+#       plot = fig2.v2, width = 9, height = 7, units = "in", bg = "white")
+
+
+# Stats
+
+ RES.NCBI.test %>% filter(threshold == 99) %>% 
+  group_by(method, threshold, Taxo.group, Levels.group) %>% summarise(Nok = length(SeqName[Similar == "Right identification"]),
+                                                                      Nnotok = length(SeqName[Similar != "Right identification"]),
+                                                                      N = n()) %>%
+  mutate(freqOK = Nok / sum(N),
+         freqnotOK = Nnotok / sum(N),
+         Levels.group = factor(Levels.group, levels =  c("> genus or unassigned", "genus", "species"))) %>% #View()
+  filter(Levels.group %in% c("species")) %>%
+  pivot_longer(cols = c(freqOK, freqnotOK), values_to = "freq") %>% 
+  filter(name == "freqOK")
+ 
