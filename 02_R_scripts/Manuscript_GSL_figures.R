@@ -64,7 +64,7 @@ RES.total <- RES.total %>% filter(kingdom %in% c("Animalia", "Metazoa"),
 # COI ref db --------------------------------------------------------------
 
 # Load ranking category!
-Taxa.Seq.final <- readr::read_csv2(file.path(here::here(), "01_Raw_data", "GSL_included_taxa.csv"))
+Taxa.Seq.final <- readr::read_csv(file.path(here::here(), "01_Raw_data", "GSL_included_taxa.csv"))
 
 Taxa.Seq.final
 

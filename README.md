@@ -12,9 +12,7 @@ __Contact:__      audrey.bourret@dfo-mpo.gc.ca
 - [Status](#status)
 - [Contents](#contents)
 - [Main Results](#main-results)
-- [Requirements](#requirements)
 - [Caveats](#caveats)
-- [Uncertainty](#uncertainty)
 - [Acknowledgements](#acknowledgements)
 - [References](#references)
 
