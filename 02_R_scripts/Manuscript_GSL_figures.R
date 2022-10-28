@@ -66,7 +66,12 @@ RES.total <- RES.total %>% filter(kingdom %in% c("Animalia", "Metazoa"),
 # Load ranking category!
 Taxa.Seq.final <- readr::read_csv(file.path(here::here(), "01_Raw_data", "GSL_included_taxa.csv"))
 
-Taxa.Seq.final
+#Taxa.Seq.final.1 <- Taxa.Seq.final %>% mutate(Category = ifelse(phylum == "Chordata" & class %nin% c("Appendicularia", "Ascidiacea"), "Vertebrate", "Invertebrate"))
+
+#Taxa.Seq.final.1  %>% group_by(Category, phylum, class)  %>% summarise(N = n()) %>% View()
+
+
+#readr::write_csv( Taxa.Seq.final.1, file.path(here::here(), "01_Raw_data", "GSL_included_taxa.1.csv"))
 
 #View(Taxa.Seq.final )
 
@@ -85,6 +90,7 @@ Taxa.Seq.final <- Taxa.Seq.final %>%
   
   Validity = factor(Validity, levels = c("Sufficient data", "BIN sharing", "Insufficient data", "No genetic data")),
   Validity.new = factor(Validity.new, levels = c("Reliable",  "Unreliable - BIN sharing","Unreliable - gaps", "No sequences available")),
+  phylum = ifelse(phylum ==  "Sipuncula", "Annelida", phylum),
   Phylum = factor(phylum, levels = c("Rotifera","Cnidaria", "Porifera", "Bryozoa", "Annelida", "Brachiopoda", "Sipuncula", "Nemertea", "Mollusca", "Echinodermata", "Arthropoda", "Chordata" ))
 )
 
@@ -116,6 +122,30 @@ gg.overview.GSLrl
 #ggsave(filename = "03_Results/fig_GSLrl_coverage.png",
 #        plot = gg.overview.GSLrl,
 #       width = 7, height = 3, units = "in")
+
+
+
+# Basic stats
+Taxa.Seq.final %>% filter(WithinNWA == "Yes", Level == "Species",  SEQavailable == "Yes") %>% 
+  group_by(Category, phylum, family) %>% summarise(N = n()) %>% 
+  group_by(Category) %>% summarise(N = n())
+
+Taxa.Seq.final %>% filter(WithinNWA == "Yes", Level == "Species",  SEQavailable == "Yes") %>% 
+  group_by(Category) %>% summarise(N = n()) 
+
+
+# Basic stats
+Taxa.Seq.final %>% filter(WithinNWA == "Yes", Level == "Species") %>% 
+  group_by(Category, SEQavailable) %>% 
+  summarise(N = n()) %>% 
+  group_by(Category) %>% 
+  summarise( perc = N[SEQavailable == "Yes"] / sum(N))
+
+Taxa.Seq.final %>% filter(WithinNWA == "Yes") %>% 
+  group_by(Level, SEQavailable) %>% 
+  summarise(N = n()) %>% 
+  group_by(Level) %>% 
+  summarise( perc = N[SEQavailable == "Yes"] / sum(N))
 
 
 # Real data - SP level Fig 4 ----------------------------------------------------------------

@@ -1,184 +1,184 @@
 Category,phylum,Name,Level,WithinNWA,SEQavailable,BIN,SPsharingBIN,SPmissingSEQ.genus,SPmissingSEQ.family,AphiaID,genus,family,order,class,kingdom,TaxonomicProblems,MorphoIDProblems,Validity
-Chordata,Chordata,Acipenser oxyrinchus,Species,Yes,Yes,BOLD:AAE3009,NA,NA,NA,151802,Acipenser,Acipenseridae,Acipenseriformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Alepocephalus bairdii,Species,Yes,Yes,"BOLD:AAD7907, BOLD:ABY4903",NA,NA,NA,126682,Alepocephalus,Alepocephalidae,Osmeriformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Alosa aestivalis,Species,Yes,Yes,BOLD:AAB1380,Alosa pseudoharengus,NA,NA,158667,Alosa,Clupeidae,Clupeiformes,Actinopterygii,Animalia,0,0,BIN sharing
-Chordata,Chordata,Alosa pseudoharengus,Species,Yes,Yes,BOLD:AAB1380,Alosa aestivalis,NA,NA,158669,Alosa,Clupeidae,Clupeiformes,Actinopterygii,Animalia,0,0,BIN sharing
-Chordata,Chordata,Alosa sapidissima,Species,Yes,Yes,BOLD:AAA9065,NA,NA,NA,158670,Alosa,Clupeidae,Clupeiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Amblyraja radiata,Species,Yes,Yes,BOLD:AAA4500,NA,NA,NA,105865,Amblyraja,Rajidae,Rajiformes,Elasmobranchii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Ammodytes americanus,Species,Yes,Yes,BOLD:AAB4332,Ammodytes dubius,NA,NA,159587,Ammodytes,Ammodytidae,Perciformes,Actinopterygii,Animalia,1,1,BIN sharing
-Chordata,Chordata,Ammodytes dubius,Species,Yes,Yes,BOLD:AAB4332,Ammodytes americanus,NA,NA,151520,Ammodytes,Ammodytidae,Perciformes,Actinopterygii,Animalia,1,1,BIN sharing
-Chordata,Chordata,Ammodytes hexapterus,Species,Yes,Yes,BOLD:AAB8000,NA,NA,NA,254510,Ammodytes,Ammodytidae,Perciformes,Actinopterygii,Animalia,NA,NA,Sufficient data
-Chordata,Chordata,Anarhichas denticulatus,Species,Yes,Yes,BOLD:ABY8022,NA,NA,NA,126757,Anarhichas,Anarhichadidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Anarhichas lupus,Species,Yes,Yes,BOLD:AAB9789,NA,NA,NA,126758,Anarhichas,Anarhichadidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Anarhichas minor,Species,Yes,Yes,BOLD:ACE4267,NA,NA,NA,126759,Anarhichas,Anarhichadidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Anguilla rostrata,Species,Yes,Yes,BOLD:AAB7300,NA,NA,NA,158562,Anguilla,Anguillidae,Anguilliformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Anisarchus medius,Species,Yes,Yes,BOLD:AAB5495,NA,NA,NA,127070,Anisarchus,Stichaeidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Anoplogaster cornuta,Species,Yes,Yes,BOLD:AAB6136,NA,NA,NA,126393,Anoplogaster,Anoplogastridae,Beryciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Apeltes quadracus,Species,Yes,Yes,BOLD:AAA2165,NA,NA,NA,159436,Apeltes,Gasterosteidae,Gasterosteiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Arctogadus glacialis,Species,Yes,Yes,BOLD:AAC3850,NA,NA,NA,126432,Arctogadus,Gadidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Arctozenus risso,Species,Yes,Yes,BOLD:AAA8780,NA,NA,NA,126352,Arctozenus,Paralepididae,Aulopiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Argentina silus,Species,Yes,Yes,BOLD:AAC4252,NA,NA,NA,126715,Argentina,Argentinidae,Argentiniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Argyropelecus gigas,Species,Yes,Yes,BOLD:AAC0977,NA,NA,NA,127308,Argyropelecus,Sternoptychidae,Stomiiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Artediellus atlanticus,Species,Yes,Yes,BOLD:AAA7009,NA,NA,NA,127193,Artediellus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,1,Sufficient data
-Chordata,Chordata,Artediellus uncinatus,Species,Yes,Yes,BOLD:ACF1553,NA,NA,NA,127195,Artediellus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,1,Sufficient data
-Chordata,Chordata,Aspidophoroides monopterygius,Species,Yes,Yes,BOLD:AAA9928,Aspidophoroides olrikii,NA,NA,159459,Aspidophoroides,Agonidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,BIN sharing
-Chordata,Chordata,Aspidophoroides olrikii,Species,Yes,Yes,BOLD:AAA9928,Aspidophoroides monopterygius,NA,NA,309268,Aspidophoroides,Agonidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,BIN sharing
-Chordata,Chordata,Bathylagus euryops,Species,Yes,Yes,BOLD:AAB5134,NA,NA,NA,126719,Bathylagus,Bathylagidae,Argentiniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Bathyraja spinicauda,Species,Yes,Yes,BOLD:AAA8067,NA,NA,NA,105868,Bathyraja,Arhynchobatidae,Rajiformes,Elasmobranchii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Benthosema glaciale,Species,Yes,Yes,BOLD:AAC5632,NA,NA,Notoscopelus kroyeri,126580,Benthosema,Myctophidae,Myctophiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Boltenia ovifera,Species,Yes,Yes,BOLD:ADU0694,NA,NA,NA,103815,Boltenia,Pyuridae,Stolidobranchia,Ascidiacea,Animalia,0,0,Sufficient data
-Chordata,Chordata,Boreogadus saida,Species,Yes,Yes,BOLD:AAA9472,NA,NA,NA,126433,Boreogadus,Gadidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Borostomias antarcticus,Species,Yes,Yes,BOLD:AAB5140,NA,NA,NA,127334,Borostomias,Stomiidae,Stomiiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Brevoortia tyrannus,Species,Yes,Yes,BOLD:AAI8291,NA,NA,NA,158691,Brevoortia,Clupeidae,Clupeiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Brosme brosme,Species,Yes,Yes,BOLD:AAB8168,NA,NA,NA,126447,Brosme,Lotidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Carcharodon carcharias,Species,Yes,Yes,BOLD:AAA9092,NA,NA,NA,105838,Carcharodon,Lamnidae,Lamniformes,Elasmobranchii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Careproctus longipinnis,Species,Yes,No,NA,NA,NA,NA,146774,Careproctus,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,No genetic data
-Chordata,Chordata,Careproctus ranula,Species,Yes,No,NA,NA,NA,NA,159523,Careproctus,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,No genetic data
-Chordata,Chordata,Careproctus reinhardti,Species,Yes,Yes,BOLD:AAB1887,NA,"Careproctus longipinnis, Careproctus ranula","Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",127212,Careproctus,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,Insufficient data
-Chordata,Chordata,Caristius fasciatus,Species,Yes,Yes,BOLD:AAD6436,NA,NA,NA,873087,Caristius,Caristiidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Catostomus commersonii,Species,Yes,Yes,BOLD:AAA5037,NA,NA,NA,158707,Catostomus,Catostomidae,Cypriniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Centroscyllium fabricii,Species,Yes,Yes,BOLD:AAB8905,NA,NA,NA,105906,Centroscyllium,Etmopteridae,Squaliformes,Elasmobranchii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Ceratias holboelli,Species,Yes,Yes,BOLD:AAC1510,NA,NA,NA,126537,Ceratias,Ceratiidae,Lophiiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Cetorhinus maximus,Species,Yes,Yes,BOLD:AAA6526,NA,NA,NA,105837,Cetorhinus,Cetorhinidae,Lamniformes,Elasmobranchii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Chauliodus sloani,Species,Yes,Yes,"BOLD:AAB1178, BOLD:AAB1179",NA,NA,NA,127338,Chauliodus,Stomiidae,Stomiiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Clupea harengus,Species,Yes,Yes,BOLD:AAB7944,NA,NA,NA,126417,Clupea,Clupeidae,Clupeiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Coregonus clupeaformis,Species,Yes,Yes,BOLD:ACA5470,NA,NA,NA,158726,Coregonus,Salmonidae,Salmoniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Cottunculus microps,Species,Yes,Yes,BOLD:AAD1283,NA,NA,NA,127235,Cottunculus,Psychrolutidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Cryptacanthodes maculatus,Species,Yes,Yes,BOLD:AAC4609,NA,NA,NA,159675,Cryptacanthodes,Cryptacanthodidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Cryptopsaras couesii,Species,Yes,Yes,BOLD:AAC1509,NA,NA,NA,126538,Cryptopsaras,Ceratiidae,Lophiiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Cyclopterus lumpus,Species,Yes,Yes,BOLD:AAA9151,NA,NA,NA,127214,Cyclopterus,Cyclopteridae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Cyclothone braueri,Species,Yes,No,NA,NA,NA,NA,127284,Cyclothone,Gonostomatidae,Stomiiformes,Actinopterygii,Animalia,1,1,No genetic data
-Chordata,Chordata,Cyclothone microdon,Species,Yes,Yes,BOLD:AAB4944,NA,Cyclothone braueri,Cyclothone braueri,127286,Cyclothone,Gonostomatidae,Stomiiformes,Actinopterygii,Animalia,1,1,Insufficient data
-Chordata,Chordata,Cyclothone pallida,Species,Yes,Yes,BOLD:AAC8495,NA,Cyclothone braueri,Cyclothone braueri,127288,Cyclothone,Gonostomatidae,Stomiiformes,Actinopterygii,Animalia,NA,NA,Insufficient data
-Chordata,Chordata,Dactylopterus volitans,Species,Yes,Yes,BOLD:AAB9833,NA,NA,NA,127232,Dactylopterus,Dactylopteridae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Dendrodoa carnea,Species,Yes,No,NA,NA,NA,NA,103881,Dendrodoa,Styelidae,Stolidobranchia,Ascidiacea,Animalia,0,0,No genetic data
-Chordata,Chordata,Didemnum albidum,Species,Yes,Yes,BOLD:ADW1154,NA,NA,NA,103560,Didemnum,Didemnidae,Aplousobranchia,Ascidiacea,Animalia,0,1,Sufficient data
-Chordata,Chordata,Enchelyopus cimbrius,Species,Yes,Yes,BOLD:AAB4061,NA,NA,NA,126450,Enchelyopus,Lotidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Epigonus pandionis,Species,Yes,Yes,BOLD:AAD3673,NA,NA,NA,159706,Epigonus,Epigonidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Eumesogrammus praecisus,Species,Yes,Yes,BOLD:AAB8912,NA,NA,NA,159817,Eumesogrammus,Stichaeidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Eumicrotremus spinosus,Species,Yes,Yes,BOLD:AAB3781,Eumicrotremus terraenovae,NA,NA,127217,Eumicrotremus,Cyclopteridae,Scorpaeniformes,Actinopterygii,Animalia,0,0,BIN sharing
-Chordata,Chordata,Eumicrotremus terraenovae,Species,Yes,Yes,BOLD:AAB3781,Eumicrotremus spinosus,NA,NA,159521,Eumicrotremus,Cyclopteridae,Scorpaeniformes,Actinopterygii,Animalia,0,0,BIN sharing
-Chordata,Chordata,Fritillaria borealis,Species,Yes,No,NA,NA,NA,NA,103375,Fritillaria,Fritillariidae,Copelata,Appendicularia,Animalia,0,0,No genetic data
-Chordata,Chordata,Fundulus diaphanus,Species,Yes,Yes,BOLD:AAB3169,NA,NA,NA,159296,Fundulus,Fundulidae,Cyprinodontiformes,Actinopterygii,Animalia,NA,NA,Sufficient data
-Chordata,Chordata,Fundulus heteroclitus,Species,Yes,Yes,BOLD:AAB8943,NA,NA,NA,159306,Fundulus,Fundulidae,Cyprinodontiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Fundulus majalis,Species,Yes,Yes,BOLD:AAV0380,NA,NA,NA,159308,Fundulus,Fundulidae,Cyprinodontiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Gadus macrocephalus,Species,Yes,Yes,BOLD:AAB3717,NA,NA,NA,254538,Gadus,Gadidae,Gadiformes,Actinopterygii,Animalia,0,1,Sufficient data
-Chordata,Chordata,Gadus morhua,Species,Yes,Yes,BOLD:ACF1143,NA,NA,NA,126436,Gadus,Gadidae,Gadiformes,Actinopterygii,Animalia,0,1,Sufficient data
-Chordata,Chordata,Gaidropsarus ensis,Species,Yes,Yes,BOLD:AAC8766,NA,NA,NA,126453,Gaidropsarus,Lotidae,Gadiformes,Actinopterygii,Animalia,0,1,Sufficient data
-Chordata,Chordata,Gasterosteus aculeatus,Species,Yes,Yes,BOLD:AAA8488,NA,NA,NA,126505,Gasterosteus,Gasterosteidae,Gasterosteiformes,Actinopterygii,Animalia,0,1,Sufficient data
-Chordata,Chordata,Gasterosteus wheatlandi,Species,Yes,Yes,BOLD:AAC0629,NA,NA,NA,159437,Gasterosteus,Gasterosteidae,Gasterosteiformes,Actinopterygii,Animalia,0,1,Sufficient data
-Chordata,Chordata,Glyptocephalus cynoglossus,Species,Yes,Yes,BOLD:AAA8848,NA,NA,Pleuronectes putnami,127136,Glyptocephalus,Pleuronectidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Gymnelus,Genus,Yes,Yes,BOLD:ACR0687,NA,NA,Lycodes terraenovae,NA,Gymnelus,Zoarcidae,Perciformes,Actinopterygii,Animalia,1,1,NA
-Chordata,Chordata,Gymnelus hemifasciatus,Species,Yes,Yes,BOLD:ACA5464,Gymnelus viridis,NA,Lycodes terraenovae,254583,Gymnelus,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,1,BIN sharing
-Chordata,Chordata,Gymnelus retrodorsalis,Species,Yes,Yes,BOLD:AAC1869,NA,NA,Lycodes terraenovae,127095,Gymnelus,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,1,Sufficient data
-Chordata,Chordata,Gymnelus viridis,Species,Yes,Yes,BOLD:ACA5464,Gymnelus hemifasciatus,NA,Lycodes terraenovae,127096,Gymnelus,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,1,BIN sharing
-Chordata,Chordata,Gymnocanthus tricuspis,Species,Yes,Yes,BOLD:AAA9567,NA,NA,NA,127198,Gymnocanthus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Halocynthia pyriformis,Species,Yes,Yes,BOLD:AAK5272,NA,NA,NA,103828,Halocynthia,Pyuridae,Stolidobranchia,Ascidiacea,Animalia,0,0,Sufficient data
-Chordata,Chordata,Helicolenus dactylopterus,Species,Yes,Yes,BOLD:AAA9248,NA,NA,NA,127251,Helicolenus,Sebastidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Hemitripterus americanus,Species,Yes,Yes,BOLD:AAB2238,NA,NA,NA,159518,Hemitripterus,Hemitripteridae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Hippoglossoides platessoides,Species,Yes,Yes,BOLD:AAA8851,NA,NA,Pleuronectes putnami,127137,Hippoglossoides,Pleuronectidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Hippoglossus hippoglossus,Species,Yes,Yes,BOLD:AAB4160,NA,NA,Pleuronectes putnami,127138,Hippoglossus,Pleuronectidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Hoplostethus mediterraneus,Species,Yes,Yes,BOLD:AAB3177,NA,NA,NA,126404,Hoplostethus,Trachichthyidae,Beryciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Hyperoglyphe perciformis,Species,Yes,Yes,BOLD:AAX1880,NA,NA,NA,126832,Hyperoglyphe,Centrolophidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Icelus bicornis,Species,Yes,Yes,BOLD:ADQ8959,NA,NA,NA,127199,Icelus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Icelus spatula,Species,Yes,Yes,BOLD:AAB1023,NA,NA,NA,127200,Icelus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Lagenorhynchus acutus,Species,Yes,Yes,BOLD:AAZ7017,NA,NA,NA,137100,Lagenorhynchus,Delphinidae,Cetartiodactyla,Mammalia,Animalia,NA,NA,Sufficient data
-Chordata,Chordata,Lagenorhynchus albirostris,Species,Yes,Yes,BOLD:AAJ2925,NA,NA,NA,137101,Lagenorhynchus,Delphinidae,Cetartiodactyla,Mammalia,Animalia,NA,NA,Sufficient data
-Chordata,Chordata,Lamna nasus,Species,Yes,Yes,BOLD:AAA3577,NA,NA,NA,105841,Lamna,Lamnidae,Lamniformes,Elasmobranchii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Lampadena speculigera,Species,Yes,Yes,BOLD:AAC2331,NA,NA,Notoscopelus kroyeri,126608,Lampadena,Myctophidae,Myctophiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Lampanyctus macdonaldi,Species,Yes,Yes,BOLD:AAB3777,NA,NA,Notoscopelus kroyeri,126617,Lampanyctus,Myctophidae,Myctophiformes,Actinopterygii,Animalia,0,1,Sufficient data
-Chordata,Chordata,Leptagonus decagonus,Species,Yes,Yes,BOLD:AAA9929,NA,NA,NA,127191,Leptagonus,Agonidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Leptoclinus maculatus,Species,Yes,Yes,BOLD:AAB1092,NA,NA,NA,127072,Leptoclinus,Stichaeidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Leucoraja ocellata,Species,Yes,Yes,BOLD:AAA5284,NA,NA,NA,158553,Leucoraja,Rajidae,Rajiformes,Elasmobranchii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Limanda ferruginea,Species,Yes,Yes,BOLD:AAA9456,NA,NA,Pleuronectes putnami,158879,Limanda,Pleuronectidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Liparis,Genus,Yes,Yes,BOLD:AAJ2060,NA,"Liparis coheni, Liparis bathyarticus","Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",NA,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,NA
-Chordata,Chordata,Liparis atlanticus,Species,Yes,Yes,BOLD:AAB4897,Liparis inquilinus,"Liparis coheni, Liparis bathyarticus","Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",159524,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Insufficient data
-Chordata,Chordata,Liparis bathyarticus,Species,Yes,No,NA,NA,NA,NA,867958,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,No genetic data
-Chordata,Chordata,Liparis coheni,Species,Yes,No,NA,NA,NA,NA,159525,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,No genetic data
-Chordata,Chordata,Liparis fabricii,Species,Yes,Yes,BOLD:ACE3464,NA,"Liparis coheni, Liparis bathyarticus","Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",127218,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,Insufficient data
-Chordata,Chordata,Liparis gibbus,Species,No,No,NA,NA,NA,NA,159526,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,No genetic data
-Chordata,Chordata,Liparis inquilinus,Species,Yes,Yes,"BOLD:AAB4897, BOLD:ACA5502",NA,"Liparis coheni, Liparis bathyarticus","Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",159528,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,Insufficient data
-Chordata,Chordata,Liparis tunicatus,Species,Yes,Yes,BOLD:AAB4896,NA,"Liparis coheni, Liparis bathyarticus","Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",154825,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,Insufficient data
-Chordata,Chordata,Lophius americanus,Species,Yes,Yes,BOLD:AAB4194,NA,NA,NA,159184,Lophius,Lophiidae,Lophiiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Lumpenus fabricii,Species,Yes,Yes,BOLD:ACA5456,NA,NA,NA,127073,Lumpenus,Stichaeidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Lumpenus lampretaeformis,Species,Yes,Yes,BOLD:ABZ5010,NA,NA,NA,154675,Lumpenus,Stichaeidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Lycenchelys paxillus,Species,Yes,Yes,BOLD:AAD0641,NA,NA,Lycodes terraenovae,159257,Lycenchelys,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Lycenchelys verrillii,Species,Yes,Yes,BOLD:AAD9732,NA,NA,Lycodes terraenovae,159258,Lycenchelys,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Lycodes,Genus,Yes,Yes,"BOLD:ABZ0973, BOLD:ACE4278",NA,Lycodes terraenovae,Lycodes terraenovae,NA,Lycodes,Zoarcidae,Perciformes,Actinopterygii,Animalia,1,1,NA
-Chordata,Chordata,Lycodes esmarkii,Species,Yes,Yes,BOLD:ACF1295,NA,Lycodes terraenovae,Lycodes terraenovae,127103,Lycodes,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,0,Insufficient data
-Chordata,Chordata,Lycodes lavalaei,Species,Yes,Yes,BOLD:AAC3262,Lycodes polaris,Lycodes terraenovae,Lycodes terraenovae,127107,Lycodes,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,0,Insufficient data
-Chordata,Chordata,Lycodes polaris,Species,Yes,Yes,BOLD:AAC3262,Lycodes lavalaei,Lycodes terraenovae,Lycodes terraenovae,127111,Lycodes,Zoarcidae,Perciformes,Actinopterygii,Animalia,1,1,Insufficient data
-Chordata,Chordata,Lycodes terraenovae,Species,Yes,No,NA,NA,NA,NA,127117,Lycodes,Zoarcidae,Perciformes,Actinopterygii,Animalia,1,1,No genetic data
-Chordata,Chordata,Lycodes vahlii,Species,Yes,Yes,BOLD:ABZ0971,NA,Lycodes terraenovae,Lycodes terraenovae,127118,Lycodes,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,0,Insufficient data
-Chordata,Chordata,Malacocephalus occidentalis,Species,Yes,Yes,BOLD:AAC6235,NA,NA,NA,158741,Malacocephalus,Macrouridae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Malacoraja senta,Species,Yes,Yes,BOLD:AAA4501,NA,NA,NA,158554,Malacoraja,Rajidae,Rajiformes,Elasmobranchii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Mallotus villosus,Species,Yes,Yes,BOLD:ACT1315,NA,NA,NA,126735,Mallotus,Osmeridae,Osmeriformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Melanogrammus aeglefinus,Species,Yes,Yes,BOLD:AAA7367,NA,NA,NA,126437,Melanogrammus,Gadidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Melanostigma atlanticum,Species,Yes,Yes,BOLD:AAC0509,NA,NA,Lycodes terraenovae,127120,Melanostigma,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Menidia menidia,Species,Yes,Yes,BOLD:AAC1370,NA,NA,NA,159228,Menidia,Atherinopsidae,Atheriniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Merluccius bilinearis,Species,Yes,Yes,BOLD:AAB0057,NA,NA,NA,158962,Merluccius,Merlucciidae,Gadiformes,Actinopterygii,Animalia,0,1,Sufficient data
-Chordata,Chordata,Microgadus tomcod,Species,Yes,Yes,BOLD:AAC4509,NA,NA,NA,158928,Microgadus,Gadidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Micromesistius poutassou,Species,Yes,Yes,BOLD:AAA7789,NA,NA,NA,126439,Micromesistius,Gadidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Mola mola,Species,Yes,Yes,"BOLD:ADK1672, BOLD:AAD0035, BOLD:AAD0034",NA,NA,NA,127405,Mola,Molidae,Tetraodontiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Morone americana,Species,Yes,Yes,BOLD:AAB9776,NA,NA,NA,151177,Morone,Moronidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Morone saxatilis,Species,Yes,Yes,BOLD:AAC7863,NA,NA,NA,151179,Morone,Moronidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Myctophum punctatum,Species,Yes,Yes,BOLD:AAB5848,NA,NA,Notoscopelus kroyeri,126627,Myctophum,Myctophidae,Myctophiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Myoxocephalus aenaeus,Species,Yes,Yes,BOLD:AAB4268,NA,NA,NA,159519,Myoxocephalus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,1,Sufficient data
-Chordata,Chordata,Myoxocephalus octodecemspinosus,Species,Yes,Yes,BOLD:AAA7008,NA,NA,NA,159520,Myoxocephalus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Myoxocephalus scorpius,Species,Yes,Yes,BOLD:AAA7007,NA,NA,NA,127203,Myoxocephalus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,1,Sufficient data
-Chordata,Chordata,Myxine glutinosa,Species,No,No,NA,NA,NA,NA,101170,Myxine,Myxinidae,Myxiniformes,Myxini,Animalia,0,1,No genetic data
-Chordata,Chordata,Myxine limosa,Species,Yes,Yes,BOLD:AAC3561,NA,NA,NA,271309,Myxine,Myxinidae,Myxiniformes,Myxini,Animalia,0,1,Sufficient data
-Chordata,Chordata,Nemichthys scolopaceus,Species,Yes,Yes,BOLD:AAB5787,NA,NA,NA,126306,Nemichthys,Nemichthyidae,Anguilliformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Neoscopelus macrolepidotus,Species,Yes,Yes,BOLD:AAC7238,NA,NA,NA,126634,Neoscopelus,Neoscopelidae,Myctophiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Nezumia bairdii,Species,Yes,Yes,BOLD:AAB9334,NA,NA,NA,183289,Nezumia,Macrouridae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Notoscopelus kroyeri,Species,Yes,No,NA,NA,NA,NA,272728,Notoscopelus,Myctophidae,Myctophiformes,Actinopterygii,Animalia,0,0,No genetic data
-Chordata,Chordata,Oikopleura dioica,Species,Yes,No,NA,NA,NA,NA,103407,Oikopleura,Oikopleuridae,Copelata,Appendicularia,Animalia,0,0,No genetic data
-Chordata,Chordata,Oikopleura labradoriensis,Species,Yes,No,NA,NA,NA,NA,103413,Oikopleura,Oikopleuridae,Copelata,Appendicularia,Animalia,0,0,No genetic data
-Chordata,Chordata,Oikopleura vanhoeffeni,Species,Yes,No,NA,NA,NA,NA,103417,Oikopleura,Oikopleuridae,Copelata,Appendicularia,Animalia,0,0,No genetic data
-Chordata,Chordata,Oncorhynchus mykiss,Species,Yes,Yes,BOLD:AAA1627,NA,NA,NA,127185,Oncorhynchus,Salmonidae,Salmoniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Osmerus mordax,Species,Yes,Yes,BOLD:AAA7992,NA,NA,NA,126737,Osmerus,Osmeridae,Osmeriformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Paraliparis calidus,Species,Yes,Yes,BOLD:AAG5288,NA,NA,"Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",159529,Paraliparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Paraliparis copei,Species,Yes,Yes,BOLD:ABZ4378,NA,NA,"Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",159530,Paraliparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Peprilus triacanthus,Species,Yes,Yes,BOLD:AAB4383,NA,NA,NA,159828,Peprilus,Stromateidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Petromyzon marinus,Species,Yes,Yes,BOLD:AAB3742,NA,NA,NA,101174,Petromyzon,Petromyzontidae,Petromyzontiformes,Petromyzonti,Animalia,0,0,Sufficient data
-Chordata,Chordata,Phocoena phocoena,Species,Yes,Yes,BOLD:AAD7212,NA,NA,NA,137117,Phocoena,Phocoenidae,Cetartiodactyla,Mammalia,Animalia,NA,NA,Sufficient data
-Chordata,Chordata,Pholis fasciata,Species,Yes,No,NA,NA,NA,NA,159846,Pholis,Pholidae,Perciformes,Actinopterygii,Animalia,0,0,No genetic data
-Chordata,Chordata,Pholis gunnellus,Species,Yes,Yes,BOLD:AAB4286,NA,Pholis fasciata,Pholis fasciata,126996,Pholis,Pholidae,Perciformes,Actinopterygii,Animalia,0,0,Insufficient data
-Chordata,Chordata,Phycis chesteri,Species,Yes,Yes,BOLD:AAC0110,NA,NA,NA,158988,Phycis,Phycidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Pleuronectes putnami,Species,Yes,No,NA,NA,NA,NA,305774,Pleuronectes,Pleuronectidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,No genetic data
-Chordata,Chordata,Pollachius virens,Species,Yes,Yes,BOLD:AAB2980,NA,NA,NA,126441,Pollachius,Gadidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Polyipnus clarus,Species,Yes,Yes,BOLD:AAB6596,NA,NA,NA,158840,Polyipnus,Sternoptychidae,Stomiiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Prionace glauca,Species,Yes,Yes,BOLD:AAA7096,NA,NA,NA,105801,Prionace,Carcharhinidae,Carcharhiniformes,Elasmobranchii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Protomyctophum arcticum,Species,Yes,Yes,BOLD:ACR2195,NA,NA,Notoscopelus kroyeri,158917,Protomyctophum,Myctophidae,Myctophiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Pseudopleuronectes americanus,Species,Yes,Yes,BOLD:AAB4139,NA,NA,Pleuronectes putnami,158885,Pseudopleuronectes,Pleuronectidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Pungitius pungitius,Species,Yes,Yes,BOLD:AAA8317,NA,NA,NA,126507,Pungitius,Gasterosteidae,Gasterosteiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Rajella fyllae,Species,Yes,Yes,BOLD:AAA4502,NA,NA,NA,105894,Rajella,Rajidae,Rajiformes,Elasmobranchii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Reinhardtius hippoglossoides,Species,Yes,Yes,BOLD:AAA8263,NA,NA,Pleuronectes putnami,127144,Reinhardtius,Pleuronectidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Salmo salar,Species,Yes,Yes,BOLD:AAA3435,NA,NA,NA,127186,Salmo,Salmonidae,Salmoniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Salvelinus alpinus,Species,Yes,Yes,BOLD:ABZ0871,NA,NA,NA,127188,Salvelinus,Salmonidae,Salmoniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Salvelinus fontinalis,Species,Yes,Yes,BOLD:AAC3575,NA,NA,NA,154241,Salvelinus,Salmonidae,Salmoniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Scomber scombrus,Species,Yes,Yes,BOLD:AAA5956,NA,NA,NA,127023,Scomber,Scombridae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Scomberesox saurus,Species,Yes,Yes,BOLD:AAB8063,NA,NA,NA,126392,Scomberesox,Scomberesocidae,Beloniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Scophthalmus aquosus,Species,Yes,Yes,BOLD:AAB7070,NA,NA,NA,158907,Scophthalmus,Scophthalmidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Sebastes fasciatus,Species,Yes,Yes,BOLD:ACE9999,"Sebastes norvegicus, Sebastes mentella",NA,NA,127252,Sebastes,Sebastidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,BIN sharing
-Chordata,Chordata,Sebastes mentella,Species,Yes,Yes,BOLD:ACE9999,"Sebastes fasciatus, Sebastes norvegicus",NA,NA,127254,Sebastes,Sebastidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,BIN sharing
-Chordata,Chordata,Sebastes norvegicus,Species,Yes,Yes,BOLD:ACE9999,"Sebastes fasciatus, Sebastes mentella",NA,NA,151324,Sebastes,Sebastidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,BIN sharing
-Chordata,Chordata,Serrivomer beanii,Species,Yes,Yes,BOLD:AAB5786,NA,NA,NA,126319,Serrivomer,Serrivomeridae,Anguilliformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Somniosus microcephalus,Species,Yes,Yes,BOLD:AAB3482,NA,NA,NA,105919,Somniosus,Somniosidae,Squaliformes,Elasmobranchii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Squalus acanthias,Species,Yes,Yes,BOLD:AAA1547,NA,NA,NA,105923,Squalus,Squalidae,Squaliformes,Elasmobranchii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Stichaeus punctatus,Species,Yes,Yes,BOLD:ACA5465,NA,NA,NA,159819,Stichaeus,Stichaeidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Stomias boa,Species,Yes,Yes,BOLD:AAB1180,NA,NA,NA,127374,Stomias,Stomiidae,Stomiiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Synaphobranchus kaupii,Species,Yes,Yes,"BOLD:AAA8286, BOLD:AAA8287",NA,NA,NA,126328,Synaphobranchus,Synaphobranchidae,Anguilliformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Syngnathus fuscus,Species,Yes,Yes,BOLD:AAG5036,NA,NA,NA,159451,Syngnathus,Syngnathidae,Syngnathiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Tautoga onitis,Species,Yes,Yes,BOLD:AAK0353,NA,NA,NA,158830,Tautoga,Labridae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Tautogolabrus adspersus,Species,Yes,Yes,BOLD:AAB7088,NA,NA,NA,159785,Tautogolabrus,Labridae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Thunnus thynnus,Species,Yes,Yes,BOLD:AAA7352,NA,NA,NA,127029,Thunnus,Scombridae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Triglops murrayi,Species,Yes,Yes,BOLD:AAB1020,NA,NA,NA,127205,Triglops,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Triglops nybelini,Species,Yes,Yes,BOLD:ABY8309,NA,NA,NA,127206,Triglops,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Ulvaria subbifurcata,Species,Yes,Yes,BOLD:AAB8913,NA,NA,NA,159821,Ulvaria,Stichaeidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Urophycis tenuis,Species,Yes,Yes,BOLD:AAB8790,NA,NA,NA,126504,Urophycis,Phycidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Xenodermichthys copei,Species,Yes,Yes,BOLD:AAB2780,NA,NA,NA,126714,Xenodermichthys,Alepocephalidae,Osmeriformes,Actinopterygii,Animalia,0,0,Sufficient data
-Chordata,Chordata,Zoarces americanus,Species,Yes,Yes,BOLD:AAB3097,NA,NA,Lycodes terraenovae,159267,Zoarces,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Acipenser oxyrinchus,Species,Yes,Yes,BOLD:AAE3009,NA,NA,NA,151802,Acipenser,Acipenseridae,Acipenseriformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Alepocephalus bairdii,Species,Yes,Yes,"BOLD:AAD7907, BOLD:ABY4903",NA,NA,NA,126682,Alepocephalus,Alepocephalidae,Osmeriformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Alosa aestivalis,Species,Yes,Yes,BOLD:AAB1380,Alosa pseudoharengus,NA,NA,158667,Alosa,Clupeidae,Clupeiformes,Actinopterygii,Animalia,0,0,BIN sharing
+Vertebrate,Chordata,Alosa pseudoharengus,Species,Yes,Yes,BOLD:AAB1380,Alosa aestivalis,NA,NA,158669,Alosa,Clupeidae,Clupeiformes,Actinopterygii,Animalia,0,0,BIN sharing
+Vertebrate,Chordata,Alosa sapidissima,Species,Yes,Yes,BOLD:AAA9065,NA,NA,NA,158670,Alosa,Clupeidae,Clupeiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Amblyraja radiata,Species,Yes,Yes,BOLD:AAA4500,NA,NA,NA,105865,Amblyraja,Rajidae,Rajiformes,Elasmobranchii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Ammodytes americanus,Species,Yes,Yes,BOLD:AAB4332,Ammodytes dubius,NA,NA,159587,Ammodytes,Ammodytidae,Perciformes,Actinopterygii,Animalia,1,1,BIN sharing
+Vertebrate,Chordata,Ammodytes dubius,Species,Yes,Yes,BOLD:AAB4332,Ammodytes americanus,NA,NA,151520,Ammodytes,Ammodytidae,Perciformes,Actinopterygii,Animalia,1,1,BIN sharing
+Vertebrate,Chordata,Ammodytes hexapterus,Species,Yes,Yes,BOLD:AAB8000,NA,NA,NA,254510,Ammodytes,Ammodytidae,Perciformes,Actinopterygii,Animalia,NA,NA,Sufficient data
+Vertebrate,Chordata,Anarhichas denticulatus,Species,Yes,Yes,BOLD:ABY8022,NA,NA,NA,126757,Anarhichas,Anarhichadidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Anarhichas lupus,Species,Yes,Yes,BOLD:AAB9789,NA,NA,NA,126758,Anarhichas,Anarhichadidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Anarhichas minor,Species,Yes,Yes,BOLD:ACE4267,NA,NA,NA,126759,Anarhichas,Anarhichadidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Anguilla rostrata,Species,Yes,Yes,BOLD:AAB7300,NA,NA,NA,158562,Anguilla,Anguillidae,Anguilliformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Anisarchus medius,Species,Yes,Yes,BOLD:AAB5495,NA,NA,NA,127070,Anisarchus,Stichaeidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Anoplogaster cornuta,Species,Yes,Yes,BOLD:AAB6136,NA,NA,NA,126393,Anoplogaster,Anoplogastridae,Beryciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Apeltes quadracus,Species,Yes,Yes,BOLD:AAA2165,NA,NA,NA,159436,Apeltes,Gasterosteidae,Gasterosteiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Arctogadus glacialis,Species,Yes,Yes,BOLD:AAC3850,NA,NA,NA,126432,Arctogadus,Gadidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Arctozenus risso,Species,Yes,Yes,BOLD:AAA8780,NA,NA,NA,126352,Arctozenus,Paralepididae,Aulopiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Argentina silus,Species,Yes,Yes,BOLD:AAC4252,NA,NA,NA,126715,Argentina,Argentinidae,Argentiniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Argyropelecus gigas,Species,Yes,Yes,BOLD:AAC0977,NA,NA,NA,127308,Argyropelecus,Sternoptychidae,Stomiiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Artediellus atlanticus,Species,Yes,Yes,BOLD:AAA7009,NA,NA,NA,127193,Artediellus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,1,Sufficient data
+Vertebrate,Chordata,Artediellus uncinatus,Species,Yes,Yes,BOLD:ACF1553,NA,NA,NA,127195,Artediellus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,1,Sufficient data
+Vertebrate,Chordata,Aspidophoroides monopterygius,Species,Yes,Yes,BOLD:AAA9928,Aspidophoroides olrikii,NA,NA,159459,Aspidophoroides,Agonidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,BIN sharing
+Vertebrate,Chordata,Aspidophoroides olrikii,Species,Yes,Yes,BOLD:AAA9928,Aspidophoroides monopterygius,NA,NA,309268,Aspidophoroides,Agonidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,BIN sharing
+Vertebrate,Chordata,Bathylagus euryops,Species,Yes,Yes,BOLD:AAB5134,NA,NA,NA,126719,Bathylagus,Bathylagidae,Argentiniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Bathyraja spinicauda,Species,Yes,Yes,BOLD:AAA8067,NA,NA,NA,105868,Bathyraja,Arhynchobatidae,Rajiformes,Elasmobranchii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Benthosema glaciale,Species,Yes,Yes,BOLD:AAC5632,NA,NA,Notoscopelus kroyeri,126580,Benthosema,Myctophidae,Myctophiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Invertebrate,Chordata,Boltenia ovifera,Species,Yes,Yes,BOLD:ADU0694,NA,NA,NA,103815,Boltenia,Pyuridae,Stolidobranchia,Ascidiacea,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Boreogadus saida,Species,Yes,Yes,BOLD:AAA9472,NA,NA,NA,126433,Boreogadus,Gadidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Borostomias antarcticus,Species,Yes,Yes,BOLD:AAB5140,NA,NA,NA,127334,Borostomias,Stomiidae,Stomiiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Brevoortia tyrannus,Species,Yes,Yes,BOLD:AAI8291,NA,NA,NA,158691,Brevoortia,Clupeidae,Clupeiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Brosme brosme,Species,Yes,Yes,BOLD:AAB8168,NA,NA,NA,126447,Brosme,Lotidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Carcharodon carcharias,Species,Yes,Yes,BOLD:AAA9092,NA,NA,NA,105838,Carcharodon,Lamnidae,Lamniformes,Elasmobranchii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Careproctus longipinnis,Species,Yes,No,NA,NA,NA,NA,146774,Careproctus,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,No genetic data
+Vertebrate,Chordata,Careproctus ranula,Species,Yes,No,NA,NA,NA,NA,159523,Careproctus,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,No genetic data
+Vertebrate,Chordata,Careproctus reinhardti,Species,Yes,Yes,BOLD:AAB1887,NA,"Careproctus longipinnis, Careproctus ranula","Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",127212,Careproctus,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,Insufficient data
+Vertebrate,Chordata,Caristius fasciatus,Species,Yes,Yes,BOLD:AAD6436,NA,NA,NA,873087,Caristius,Caristiidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Catostomus commersonii,Species,Yes,Yes,BOLD:AAA5037,NA,NA,NA,158707,Catostomus,Catostomidae,Cypriniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Centroscyllium fabricii,Species,Yes,Yes,BOLD:AAB8905,NA,NA,NA,105906,Centroscyllium,Etmopteridae,Squaliformes,Elasmobranchii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Ceratias holboelli,Species,Yes,Yes,BOLD:AAC1510,NA,NA,NA,126537,Ceratias,Ceratiidae,Lophiiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Cetorhinus maximus,Species,Yes,Yes,BOLD:AAA6526,NA,NA,NA,105837,Cetorhinus,Cetorhinidae,Lamniformes,Elasmobranchii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Chauliodus sloani,Species,Yes,Yes,"BOLD:AAB1178, BOLD:AAB1179",NA,NA,NA,127338,Chauliodus,Stomiidae,Stomiiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Clupea harengus,Species,Yes,Yes,BOLD:AAB7944,NA,NA,NA,126417,Clupea,Clupeidae,Clupeiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Coregonus clupeaformis,Species,Yes,Yes,BOLD:ACA5470,NA,NA,NA,158726,Coregonus,Salmonidae,Salmoniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Cottunculus microps,Species,Yes,Yes,BOLD:AAD1283,NA,NA,NA,127235,Cottunculus,Psychrolutidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Cryptacanthodes maculatus,Species,Yes,Yes,BOLD:AAC4609,NA,NA,NA,159675,Cryptacanthodes,Cryptacanthodidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Cryptopsaras couesii,Species,Yes,Yes,BOLD:AAC1509,NA,NA,NA,126538,Cryptopsaras,Ceratiidae,Lophiiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Cyclopterus lumpus,Species,Yes,Yes,BOLD:AAA9151,NA,NA,NA,127214,Cyclopterus,Cyclopteridae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Cyclothone braueri,Species,Yes,No,NA,NA,NA,NA,127284,Cyclothone,Gonostomatidae,Stomiiformes,Actinopterygii,Animalia,1,1,No genetic data
+Vertebrate,Chordata,Cyclothone microdon,Species,Yes,Yes,BOLD:AAB4944,NA,Cyclothone braueri,Cyclothone braueri,127286,Cyclothone,Gonostomatidae,Stomiiformes,Actinopterygii,Animalia,1,1,Insufficient data
+Vertebrate,Chordata,Cyclothone pallida,Species,Yes,Yes,BOLD:AAC8495,NA,Cyclothone braueri,Cyclothone braueri,127288,Cyclothone,Gonostomatidae,Stomiiformes,Actinopterygii,Animalia,NA,NA,Insufficient data
+Vertebrate,Chordata,Dactylopterus volitans,Species,Yes,Yes,BOLD:AAB9833,NA,NA,NA,127232,Dactylopterus,Dactylopteridae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Invertebrate,Chordata,Dendrodoa carnea,Species,Yes,No,NA,NA,NA,NA,103881,Dendrodoa,Styelidae,Stolidobranchia,Ascidiacea,Animalia,0,0,No genetic data
+Invertebrate,Chordata,Didemnum albidum,Species,Yes,Yes,BOLD:ADW1154,NA,NA,NA,103560,Didemnum,Didemnidae,Aplousobranchia,Ascidiacea,Animalia,0,1,Sufficient data
+Vertebrate,Chordata,Enchelyopus cimbrius,Species,Yes,Yes,BOLD:AAB4061,NA,NA,NA,126450,Enchelyopus,Lotidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Epigonus pandionis,Species,Yes,Yes,BOLD:AAD3673,NA,NA,NA,159706,Epigonus,Epigonidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Eumesogrammus praecisus,Species,Yes,Yes,BOLD:AAB8912,NA,NA,NA,159817,Eumesogrammus,Stichaeidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Eumicrotremus spinosus,Species,Yes,Yes,BOLD:AAB3781,Eumicrotremus terraenovae,NA,NA,127217,Eumicrotremus,Cyclopteridae,Scorpaeniformes,Actinopterygii,Animalia,0,0,BIN sharing
+Vertebrate,Chordata,Eumicrotremus terraenovae,Species,Yes,Yes,BOLD:AAB3781,Eumicrotremus spinosus,NA,NA,159521,Eumicrotremus,Cyclopteridae,Scorpaeniformes,Actinopterygii,Animalia,0,0,BIN sharing
+Invertebrate,Chordata,Fritillaria borealis,Species,Yes,No,NA,NA,NA,NA,103375,Fritillaria,Fritillariidae,Copelata,Appendicularia,Animalia,0,0,No genetic data
+Vertebrate,Chordata,Fundulus diaphanus,Species,Yes,Yes,BOLD:AAB3169,NA,NA,NA,159296,Fundulus,Fundulidae,Cyprinodontiformes,Actinopterygii,Animalia,NA,NA,Sufficient data
+Vertebrate,Chordata,Fundulus heteroclitus,Species,Yes,Yes,BOLD:AAB8943,NA,NA,NA,159306,Fundulus,Fundulidae,Cyprinodontiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Fundulus majalis,Species,Yes,Yes,BOLD:AAV0380,NA,NA,NA,159308,Fundulus,Fundulidae,Cyprinodontiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Gadus macrocephalus,Species,Yes,Yes,BOLD:AAB3717,NA,NA,NA,254538,Gadus,Gadidae,Gadiformes,Actinopterygii,Animalia,0,1,Sufficient data
+Vertebrate,Chordata,Gadus morhua,Species,Yes,Yes,BOLD:ACF1143,NA,NA,NA,126436,Gadus,Gadidae,Gadiformes,Actinopterygii,Animalia,0,1,Sufficient data
+Vertebrate,Chordata,Gaidropsarus ensis,Species,Yes,Yes,BOLD:AAC8766,NA,NA,NA,126453,Gaidropsarus,Lotidae,Gadiformes,Actinopterygii,Animalia,0,1,Sufficient data
+Vertebrate,Chordata,Gasterosteus aculeatus,Species,Yes,Yes,BOLD:AAA8488,NA,NA,NA,126505,Gasterosteus,Gasterosteidae,Gasterosteiformes,Actinopterygii,Animalia,0,1,Sufficient data
+Vertebrate,Chordata,Gasterosteus wheatlandi,Species,Yes,Yes,BOLD:AAC0629,NA,NA,NA,159437,Gasterosteus,Gasterosteidae,Gasterosteiformes,Actinopterygii,Animalia,0,1,Sufficient data
+Vertebrate,Chordata,Glyptocephalus cynoglossus,Species,Yes,Yes,BOLD:AAA8848,NA,NA,Pleuronectes putnami,127136,Glyptocephalus,Pleuronectidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Gymnelus,Genus,Yes,Yes,BOLD:ACR0687,NA,NA,Lycodes terraenovae,NA,Gymnelus,Zoarcidae,Perciformes,Actinopterygii,Animalia,1,1,NA
+Vertebrate,Chordata,Gymnelus hemifasciatus,Species,Yes,Yes,BOLD:ACA5464,Gymnelus viridis,NA,Lycodes terraenovae,254583,Gymnelus,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,1,BIN sharing
+Vertebrate,Chordata,Gymnelus retrodorsalis,Species,Yes,Yes,BOLD:AAC1869,NA,NA,Lycodes terraenovae,127095,Gymnelus,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,1,Sufficient data
+Vertebrate,Chordata,Gymnelus viridis,Species,Yes,Yes,BOLD:ACA5464,Gymnelus hemifasciatus,NA,Lycodes terraenovae,127096,Gymnelus,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,1,BIN sharing
+Vertebrate,Chordata,Gymnocanthus tricuspis,Species,Yes,Yes,BOLD:AAA9567,NA,NA,NA,127198,Gymnocanthus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Invertebrate,Chordata,Halocynthia pyriformis,Species,Yes,Yes,BOLD:AAK5272,NA,NA,NA,103828,Halocynthia,Pyuridae,Stolidobranchia,Ascidiacea,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Helicolenus dactylopterus,Species,Yes,Yes,BOLD:AAA9248,NA,NA,NA,127251,Helicolenus,Sebastidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Hemitripterus americanus,Species,Yes,Yes,BOLD:AAB2238,NA,NA,NA,159518,Hemitripterus,Hemitripteridae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Hippoglossoides platessoides,Species,Yes,Yes,BOLD:AAA8851,NA,NA,Pleuronectes putnami,127137,Hippoglossoides,Pleuronectidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Hippoglossus hippoglossus,Species,Yes,Yes,BOLD:AAB4160,NA,NA,Pleuronectes putnami,127138,Hippoglossus,Pleuronectidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Hoplostethus mediterraneus,Species,Yes,Yes,BOLD:AAB3177,NA,NA,NA,126404,Hoplostethus,Trachichthyidae,Beryciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Hyperoglyphe perciformis,Species,Yes,Yes,BOLD:AAX1880,NA,NA,NA,126832,Hyperoglyphe,Centrolophidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Icelus bicornis,Species,Yes,Yes,BOLD:ADQ8959,NA,NA,NA,127199,Icelus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Icelus spatula,Species,Yes,Yes,BOLD:AAB1023,NA,NA,NA,127200,Icelus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Lagenorhynchus acutus,Species,Yes,Yes,BOLD:AAZ7017,NA,NA,NA,137100,Lagenorhynchus,Delphinidae,Cetartiodactyla,Mammalia,Animalia,NA,NA,Sufficient data
+Vertebrate,Chordata,Lagenorhynchus albirostris,Species,Yes,Yes,BOLD:AAJ2925,NA,NA,NA,137101,Lagenorhynchus,Delphinidae,Cetartiodactyla,Mammalia,Animalia,NA,NA,Sufficient data
+Vertebrate,Chordata,Lamna nasus,Species,Yes,Yes,BOLD:AAA3577,NA,NA,NA,105841,Lamna,Lamnidae,Lamniformes,Elasmobranchii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Lampadena speculigera,Species,Yes,Yes,BOLD:AAC2331,NA,NA,Notoscopelus kroyeri,126608,Lampadena,Myctophidae,Myctophiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Lampanyctus macdonaldi,Species,Yes,Yes,BOLD:AAB3777,NA,NA,Notoscopelus kroyeri,126617,Lampanyctus,Myctophidae,Myctophiformes,Actinopterygii,Animalia,0,1,Sufficient data
+Vertebrate,Chordata,Leptagonus decagonus,Species,Yes,Yes,BOLD:AAA9929,NA,NA,NA,127191,Leptagonus,Agonidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Leptoclinus maculatus,Species,Yes,Yes,BOLD:AAB1092,NA,NA,NA,127072,Leptoclinus,Stichaeidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Leucoraja ocellata,Species,Yes,Yes,BOLD:AAA5284,NA,NA,NA,158553,Leucoraja,Rajidae,Rajiformes,Elasmobranchii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Limanda ferruginea,Species,Yes,Yes,BOLD:AAA9456,NA,NA,Pleuronectes putnami,158879,Limanda,Pleuronectidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Liparis,Genus,Yes,Yes,BOLD:AAJ2060,NA,"Liparis coheni, Liparis bathyarticus","Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",NA,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,NA
+Vertebrate,Chordata,Liparis atlanticus,Species,Yes,Yes,BOLD:AAB4897,Liparis inquilinus,"Liparis coheni, Liparis bathyarticus","Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",159524,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Insufficient data
+Vertebrate,Chordata,Liparis bathyarticus,Species,Yes,No,NA,NA,NA,NA,867958,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,No genetic data
+Vertebrate,Chordata,Liparis coheni,Species,Yes,No,NA,NA,NA,NA,159525,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,No genetic data
+Vertebrate,Chordata,Liparis fabricii,Species,Yes,Yes,BOLD:ACE3464,NA,"Liparis coheni, Liparis bathyarticus","Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",127218,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,Insufficient data
+Vertebrate,Chordata,Liparis gibbus,Species,No,No,NA,NA,NA,NA,159526,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,No genetic data
+Vertebrate,Chordata,Liparis inquilinus,Species,Yes,Yes,"BOLD:AAB4897, BOLD:ACA5502",NA,"Liparis coheni, Liparis bathyarticus","Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",159528,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,Insufficient data
+Vertebrate,Chordata,Liparis tunicatus,Species,Yes,Yes,BOLD:AAB4896,NA,"Liparis coheni, Liparis bathyarticus","Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",154825,Liparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,1,1,Insufficient data
+Vertebrate,Chordata,Lophius americanus,Species,Yes,Yes,BOLD:AAB4194,NA,NA,NA,159184,Lophius,Lophiidae,Lophiiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Lumpenus fabricii,Species,Yes,Yes,BOLD:ACA5456,NA,NA,NA,127073,Lumpenus,Stichaeidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Lumpenus lampretaeformis,Species,Yes,Yes,BOLD:ABZ5010,NA,NA,NA,154675,Lumpenus,Stichaeidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Lycenchelys paxillus,Species,Yes,Yes,BOLD:AAD0641,NA,NA,Lycodes terraenovae,159257,Lycenchelys,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Lycenchelys verrillii,Species,Yes,Yes,BOLD:AAD9732,NA,NA,Lycodes terraenovae,159258,Lycenchelys,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Lycodes,Genus,Yes,Yes,"BOLD:ABZ0973, BOLD:ACE4278",NA,Lycodes terraenovae,Lycodes terraenovae,NA,Lycodes,Zoarcidae,Perciformes,Actinopterygii,Animalia,1,1,NA
+Vertebrate,Chordata,Lycodes esmarkii,Species,Yes,Yes,BOLD:ACF1295,NA,Lycodes terraenovae,Lycodes terraenovae,127103,Lycodes,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,0,Insufficient data
+Vertebrate,Chordata,Lycodes lavalaei,Species,Yes,Yes,BOLD:AAC3262,Lycodes polaris,Lycodes terraenovae,Lycodes terraenovae,127107,Lycodes,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,0,Insufficient data
+Vertebrate,Chordata,Lycodes polaris,Species,Yes,Yes,BOLD:AAC3262,Lycodes lavalaei,Lycodes terraenovae,Lycodes terraenovae,127111,Lycodes,Zoarcidae,Perciformes,Actinopterygii,Animalia,1,1,Insufficient data
+Vertebrate,Chordata,Lycodes terraenovae,Species,Yes,No,NA,NA,NA,NA,127117,Lycodes,Zoarcidae,Perciformes,Actinopterygii,Animalia,1,1,No genetic data
+Vertebrate,Chordata,Lycodes vahlii,Species,Yes,Yes,BOLD:ABZ0971,NA,Lycodes terraenovae,Lycodes terraenovae,127118,Lycodes,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,0,Insufficient data
+Vertebrate,Chordata,Malacocephalus occidentalis,Species,Yes,Yes,BOLD:AAC6235,NA,NA,NA,158741,Malacocephalus,Macrouridae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Malacoraja senta,Species,Yes,Yes,BOLD:AAA4501,NA,NA,NA,158554,Malacoraja,Rajidae,Rajiformes,Elasmobranchii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Mallotus villosus,Species,Yes,Yes,BOLD:ACT1315,NA,NA,NA,126735,Mallotus,Osmeridae,Osmeriformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Melanogrammus aeglefinus,Species,Yes,Yes,BOLD:AAA7367,NA,NA,NA,126437,Melanogrammus,Gadidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Melanostigma atlanticum,Species,Yes,Yes,BOLD:AAC0509,NA,NA,Lycodes terraenovae,127120,Melanostigma,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Menidia menidia,Species,Yes,Yes,BOLD:AAC1370,NA,NA,NA,159228,Menidia,Atherinopsidae,Atheriniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Merluccius bilinearis,Species,Yes,Yes,BOLD:AAB0057,NA,NA,NA,158962,Merluccius,Merlucciidae,Gadiformes,Actinopterygii,Animalia,0,1,Sufficient data
+Vertebrate,Chordata,Microgadus tomcod,Species,Yes,Yes,BOLD:AAC4509,NA,NA,NA,158928,Microgadus,Gadidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Micromesistius poutassou,Species,Yes,Yes,BOLD:AAA7789,NA,NA,NA,126439,Micromesistius,Gadidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Mola mola,Species,Yes,Yes,"BOLD:ADK1672, BOLD:AAD0035, BOLD:AAD0034",NA,NA,NA,127405,Mola,Molidae,Tetraodontiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Morone americana,Species,Yes,Yes,BOLD:AAB9776,NA,NA,NA,151177,Morone,Moronidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Morone saxatilis,Species,Yes,Yes,BOLD:AAC7863,NA,NA,NA,151179,Morone,Moronidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Myctophum punctatum,Species,Yes,Yes,BOLD:AAB5848,NA,NA,Notoscopelus kroyeri,126627,Myctophum,Myctophidae,Myctophiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Myoxocephalus aenaeus,Species,Yes,Yes,BOLD:AAB4268,NA,NA,NA,159519,Myoxocephalus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,1,Sufficient data
+Vertebrate,Chordata,Myoxocephalus octodecemspinosus,Species,Yes,Yes,BOLD:AAA7008,NA,NA,NA,159520,Myoxocephalus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Myoxocephalus scorpius,Species,Yes,Yes,BOLD:AAA7007,NA,NA,NA,127203,Myoxocephalus,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,1,Sufficient data
+Vertebrate,Chordata,Myxine glutinosa,Species,No,No,NA,NA,NA,NA,101170,Myxine,Myxinidae,Myxiniformes,Myxini,Animalia,0,1,No genetic data
+Vertebrate,Chordata,Myxine limosa,Species,Yes,Yes,BOLD:AAC3561,NA,NA,NA,271309,Myxine,Myxinidae,Myxiniformes,Myxini,Animalia,0,1,Sufficient data
+Vertebrate,Chordata,Nemichthys scolopaceus,Species,Yes,Yes,BOLD:AAB5787,NA,NA,NA,126306,Nemichthys,Nemichthyidae,Anguilliformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Neoscopelus macrolepidotus,Species,Yes,Yes,BOLD:AAC7238,NA,NA,NA,126634,Neoscopelus,Neoscopelidae,Myctophiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Nezumia bairdii,Species,Yes,Yes,BOLD:AAB9334,NA,NA,NA,183289,Nezumia,Macrouridae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Notoscopelus kroyeri,Species,Yes,No,NA,NA,NA,NA,272728,Notoscopelus,Myctophidae,Myctophiformes,Actinopterygii,Animalia,0,0,No genetic data
+Invertebrate,Chordata,Oikopleura dioica,Species,Yes,No,NA,NA,NA,NA,103407,Oikopleura,Oikopleuridae,Copelata,Appendicularia,Animalia,0,0,No genetic data
+Invertebrate,Chordata,Oikopleura labradoriensis,Species,Yes,No,NA,NA,NA,NA,103413,Oikopleura,Oikopleuridae,Copelata,Appendicularia,Animalia,0,0,No genetic data
+Invertebrate,Chordata,Oikopleura vanhoeffeni,Species,Yes,No,NA,NA,NA,NA,103417,Oikopleura,Oikopleuridae,Copelata,Appendicularia,Animalia,0,0,No genetic data
+Vertebrate,Chordata,Oncorhynchus mykiss,Species,Yes,Yes,BOLD:AAA1627,NA,NA,NA,127185,Oncorhynchus,Salmonidae,Salmoniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Osmerus mordax,Species,Yes,Yes,BOLD:AAA7992,NA,NA,NA,126737,Osmerus,Osmeridae,Osmeriformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Paraliparis calidus,Species,Yes,Yes,BOLD:AAG5288,NA,NA,"Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",159529,Paraliparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Paraliparis copei,Species,Yes,Yes,BOLD:ABZ4378,NA,NA,"Careproctus longipinnis, Careproctus ranula, Liparis coheni, Liparis bathyarticus",159530,Paraliparis,Liparidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Peprilus triacanthus,Species,Yes,Yes,BOLD:AAB4383,NA,NA,NA,159828,Peprilus,Stromateidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Petromyzon marinus,Species,Yes,Yes,BOLD:AAB3742,NA,NA,NA,101174,Petromyzon,Petromyzontidae,Petromyzontiformes,Petromyzonti,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Phocoena phocoena,Species,Yes,Yes,BOLD:AAD7212,NA,NA,NA,137117,Phocoena,Phocoenidae,Cetartiodactyla,Mammalia,Animalia,NA,NA,Sufficient data
+Vertebrate,Chordata,Pholis fasciata,Species,Yes,No,NA,NA,NA,NA,159846,Pholis,Pholidae,Perciformes,Actinopterygii,Animalia,0,0,No genetic data
+Vertebrate,Chordata,Pholis gunnellus,Species,Yes,Yes,BOLD:AAB4286,NA,Pholis fasciata,Pholis fasciata,126996,Pholis,Pholidae,Perciformes,Actinopterygii,Animalia,0,0,Insufficient data
+Vertebrate,Chordata,Phycis chesteri,Species,Yes,Yes,BOLD:AAC0110,NA,NA,NA,158988,Phycis,Phycidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Pleuronectes putnami,Species,Yes,No,NA,NA,NA,NA,305774,Pleuronectes,Pleuronectidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,No genetic data
+Vertebrate,Chordata,Pollachius virens,Species,Yes,Yes,BOLD:AAB2980,NA,NA,NA,126441,Pollachius,Gadidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Polyipnus clarus,Species,Yes,Yes,BOLD:AAB6596,NA,NA,NA,158840,Polyipnus,Sternoptychidae,Stomiiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Prionace glauca,Species,Yes,Yes,BOLD:AAA7096,NA,NA,NA,105801,Prionace,Carcharhinidae,Carcharhiniformes,Elasmobranchii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Protomyctophum arcticum,Species,Yes,Yes,BOLD:ACR2195,NA,NA,Notoscopelus kroyeri,158917,Protomyctophum,Myctophidae,Myctophiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Pseudopleuronectes americanus,Species,Yes,Yes,BOLD:AAB4139,NA,NA,Pleuronectes putnami,158885,Pseudopleuronectes,Pleuronectidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Pungitius pungitius,Species,Yes,Yes,BOLD:AAA8317,NA,NA,NA,126507,Pungitius,Gasterosteidae,Gasterosteiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Rajella fyllae,Species,Yes,Yes,BOLD:AAA4502,NA,NA,NA,105894,Rajella,Rajidae,Rajiformes,Elasmobranchii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Reinhardtius hippoglossoides,Species,Yes,Yes,BOLD:AAA8263,NA,NA,Pleuronectes putnami,127144,Reinhardtius,Pleuronectidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Salmo salar,Species,Yes,Yes,BOLD:AAA3435,NA,NA,NA,127186,Salmo,Salmonidae,Salmoniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Salvelinus alpinus,Species,Yes,Yes,BOLD:ABZ0871,NA,NA,NA,127188,Salvelinus,Salmonidae,Salmoniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Salvelinus fontinalis,Species,Yes,Yes,BOLD:AAC3575,NA,NA,NA,154241,Salvelinus,Salmonidae,Salmoniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Scomber scombrus,Species,Yes,Yes,BOLD:AAA5956,NA,NA,NA,127023,Scomber,Scombridae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Scomberesox saurus,Species,Yes,Yes,BOLD:AAB8063,NA,NA,NA,126392,Scomberesox,Scomberesocidae,Beloniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Scophthalmus aquosus,Species,Yes,Yes,BOLD:AAB7070,NA,NA,NA,158907,Scophthalmus,Scophthalmidae,Pleuronectiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Sebastes fasciatus,Species,Yes,Yes,BOLD:ACE9999,"Sebastes norvegicus, Sebastes mentella",NA,NA,127252,Sebastes,Sebastidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,BIN sharing
+Vertebrate,Chordata,Sebastes mentella,Species,Yes,Yes,BOLD:ACE9999,"Sebastes fasciatus, Sebastes norvegicus",NA,NA,127254,Sebastes,Sebastidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,BIN sharing
+Vertebrate,Chordata,Sebastes norvegicus,Species,Yes,Yes,BOLD:ACE9999,"Sebastes fasciatus, Sebastes mentella",NA,NA,151324,Sebastes,Sebastidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,BIN sharing
+Vertebrate,Chordata,Serrivomer beanii,Species,Yes,Yes,BOLD:AAB5786,NA,NA,NA,126319,Serrivomer,Serrivomeridae,Anguilliformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Somniosus microcephalus,Species,Yes,Yes,BOLD:AAB3482,NA,NA,NA,105919,Somniosus,Somniosidae,Squaliformes,Elasmobranchii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Squalus acanthias,Species,Yes,Yes,BOLD:AAA1547,NA,NA,NA,105923,Squalus,Squalidae,Squaliformes,Elasmobranchii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Stichaeus punctatus,Species,Yes,Yes,BOLD:ACA5465,NA,NA,NA,159819,Stichaeus,Stichaeidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Stomias boa,Species,Yes,Yes,BOLD:AAB1180,NA,NA,NA,127374,Stomias,Stomiidae,Stomiiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Synaphobranchus kaupii,Species,Yes,Yes,"BOLD:AAA8286, BOLD:AAA8287",NA,NA,NA,126328,Synaphobranchus,Synaphobranchidae,Anguilliformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Syngnathus fuscus,Species,Yes,Yes,BOLD:AAG5036,NA,NA,NA,159451,Syngnathus,Syngnathidae,Syngnathiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Tautoga onitis,Species,Yes,Yes,BOLD:AAK0353,NA,NA,NA,158830,Tautoga,Labridae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Tautogolabrus adspersus,Species,Yes,Yes,BOLD:AAB7088,NA,NA,NA,159785,Tautogolabrus,Labridae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Thunnus thynnus,Species,Yes,Yes,BOLD:AAA7352,NA,NA,NA,127029,Thunnus,Scombridae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Triglops murrayi,Species,Yes,Yes,BOLD:AAB1020,NA,NA,NA,127205,Triglops,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Triglops nybelini,Species,Yes,Yes,BOLD:ABY8309,NA,NA,NA,127206,Triglops,Cottidae,Scorpaeniformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Ulvaria subbifurcata,Species,Yes,Yes,BOLD:AAB8913,NA,NA,NA,159821,Ulvaria,Stichaeidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Urophycis tenuis,Species,Yes,Yes,BOLD:AAB8790,NA,NA,NA,126504,Urophycis,Phycidae,Gadiformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Xenodermichthys copei,Species,Yes,Yes,BOLD:AAB2780,NA,NA,NA,126714,Xenodermichthys,Alepocephalidae,Osmeriformes,Actinopterygii,Animalia,0,0,Sufficient data
+Vertebrate,Chordata,Zoarces americanus,Species,Yes,Yes,BOLD:AAB3097,NA,NA,Lycodes terraenovae,159267,Zoarces,Zoarcidae,Perciformes,Actinopterygii,Animalia,0,0,Sufficient data
 Invertebrate,Annelida,Alitta virens,Species,Yes,Yes,BOLD:AAA8306,NA,NA,NA,234851,Alitta,Nereididae,Phyllodocida,Polychaeta,Animalia,1,1,Sufficient data
 Invertebrate,Annelida,Amphitrite cirrata,Species,Yes,Yes,BOLD:AAE3282,NA,Amphitrite ornata,"Amphitrite ornata, Artacama canadensis, Lanassa nordenskioldi, Laphania boecki, Leaena ebranchiata, Lysilla loveni, Neoamphitrite grayi, Neoamphitrite groenlandica, Nicolea venustula",131474,Amphitrite,Terebellidae,Terebellida,Polychaeta,Animalia,0,0,Insufficient data
 Invertebrate,Annelida,Amphitrite ornata,Species,Yes,No,NA,NA,NA,NA,157166,Amphitrite,Terebellidae,Terebellida,Polychaeta,Animalia,0,0,No genetic data
