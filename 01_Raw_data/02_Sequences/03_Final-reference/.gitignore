@@ -1,0 +1,6 @@
+#Ignore everything
+*
+# Except gitignore
+!.gitignore
+!REF.priori.Cut.withTAXO.2021-01-21.fasta
+!REF.posteriori.Cut.withTAXO.2021-01-21.fasta

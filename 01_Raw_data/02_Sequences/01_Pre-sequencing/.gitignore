@@ -1,0 +1,5 @@
+#Ignore everything
+*
+# Except gitignore
+!.gitignore
+!DNA.align.cut.BINfilt.2020-10-06.fasta

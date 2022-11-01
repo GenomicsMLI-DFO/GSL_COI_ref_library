@@ -1,0 +1,5 @@
+#Ignore everything
+*.data
+*.xlsx
+# Except gitignore
+!.gitignore
