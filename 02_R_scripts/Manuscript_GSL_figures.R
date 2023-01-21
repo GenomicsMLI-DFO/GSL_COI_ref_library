@@ -490,7 +490,7 @@ grapha.acc.over <- RES.NCBI.test %>%
   scale_y_continuous(limits = c(0,1)) +
   geom_bar(stat= "identity", col = "black")+
   #geom_bar(stat= "identity",col = "darkgray", position = position_fill(reverse = TRUE)) +
-  scale_fill_manual(values = c("gray60", "gray95"), labels = c("Inaccurate", "Accurate") )+
+  scale_fill_manual(values = c("gray60", "gray95"), labels = c("FP, inaccurate", "TP, accurate") )+
   
   facet_grid(. ~method.graph , scale = "free") + 
   xlab("") +
@@ -533,14 +533,14 @@ grapha.acc.sp <- RES.NCBI.test %>% filter(threshold == 97) %>%
 
 grapha.acc.sp
 
-# 
-# graphb.over <- RES.NCBI.test %>% filter(Levels %in% c("species", "genus")) %>% 
+
+# graphb.over <- RES.NCBI.test %>% filter(Levels %in% c("species", "genus")) %>%
 #   group_by(method.graph, threshold, Levels.group, Similar) %>% summarise(N = n()) %>%
 #   mutate(freq = N / sum(N),
-#          threshold = factor(threshold)) %>% 
+#          threshold = factor(threshold)) %>%
 #   # Levels.group = factor(Levels.group, levels =  c("> genus or unassigned", "genus", "species"))) %>% #View()
 #   filter(Similar != "Wrong identification",
-#          Levels.group %in% c("species")) %>% 
+#          Levels.group %in% c("species")) %>%
 #   ggplot(aes(y=freq, x = threshold, fill = Levels.group, group = Levels.group)) +
 #   #geom_point(position=position_dodge(width=0.3), size = 3) +
 #   #scale_y_continuous(limits = c(,1)) +
@@ -548,9 +548,9 @@ grapha.acc.sp
 #   ungeviz::geom_hpline()+
 #   #geom_bar(stat= "identity", position = "dodge") +
 #   scale_y_continuous(limits = c(0.87,1)) +
-#    facet_grid(. ~ method.graph , scale = "free") + 
+#    facet_grid(. ~ method.graph , scale = "free") +
 #   xlab("") +
-#   ylab(expression(paste("Accuracy"))) +  theme_bw() + 
+#   ylab(expression(paste("Precision"))) +  theme_bw() +
 #   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
 #         legend.position = "bottom",
 #         strip.text = element_markdown(),
@@ -571,8 +571,8 @@ fig2.v1
 
 
 
-#ggsave(filename = file.path(here::here(), "03_Results", "fig_NCBI.png"), 
-#       plot = fig2.v1, width = 9, height = 4, units = "in", bg = "white")
+ggsave(filename = file.path(here::here(), "03_Results", "fig_NCBI_v2.png"), 
+       plot = fig2.v1, width = 9, height = 4, units = "in", bg = "white")
 
 
 # Stats

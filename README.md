@@ -41,6 +41,12 @@ The objective of this study was to estimate the accuracy of species assignments 
 - [MS_ESV_reads.csv](./01_Raw_data/MS_ESV_reads.csv): N reads associated with ASV observed within the real metabarcoding dataset.
 - [MS_NCBI.TestAssignments.csv](./01_Raw_data/MS_NCBI.TestAssignments.csv): Taxonomic assignment results for the sequences comprised within gsl-rl, using ncbi-nt and 2 assignment methods.
 
+### Scripts
+
+- [Assign_SP_PrePost_jan2021.R](./02_R_scripts/Assign_SP_PrePost_jan2021.R): To perform taxonomical assignment (BLAST-LCA, BLAST-TopHit, IDtaxa)
+- [Bold_Extract_Seq_PostSeq.R](./02_R_scripts/Bold_Extract_Seq_PostSeq.R): For data-mining on BOLD
+- [Manuscript_GSL_figures.R](./02_R_scripts/Assign_SP_PrePost_jan2021.R): To compute stats and create figures from results
+
 ## Main results
 
 | <img src="03_Results/fig_GSLrl_coverage.png" width=100% height=100%> |
@@ -48,7 +54,7 @@ The objective of this study was to estimate the accuracy of species assignments 
 | **Figure 2** Classification of 651 marine faunal species previously observed in the Gulf of St. Lawrence and included in the GSL-rl, by phylum. Species rank categories are based on the similarity and availability of sequences from local and close relative species.|
 
 
-| <img src="03_Results/fig_NCBI.png" width=100% height=100%> |
+| <img src="03_Results/fig_NCBI_v2.png" width=100% height=100%> |
 |:--:| 
 | **Figure 3** Results of taxonomic assignment of sequences from the GSL-rl using NBCI-nt and Blast-LCA or Blast-TopHit methods. Panels A and B present the proportion of accurate and inaccurate species assignments. Results overall taxonomic groups at the three identity thresholds (95%, 97%, 99%; panel A) and by taxonomic group at the 97% threshold (panel B).|
 

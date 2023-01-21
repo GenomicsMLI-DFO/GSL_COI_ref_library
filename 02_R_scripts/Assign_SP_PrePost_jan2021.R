@@ -20,6 +20,7 @@ library(readxl)
 
 library(ggpubr)
 library(ggtext)
+library(Hmisc)
 
 # ESV Data --------------------------------------------------------------------
 
@@ -107,7 +108,7 @@ mICOIintF <- "GGWACWGGWTGAACWGTWTAYCCYCC"
 
 # Use the final file
 
-Taxa.Seq.final <- read_csv2("03_Results/Taxa.Seq.final.csv")
+Taxa.Seq.final <- read_csv("01_Raw_data/GSL_included_taxa.csv")
 
 # Add a "sp" to those assigned at the genus level
 
@@ -132,7 +133,7 @@ Taxa.Seq.final %>% filter(is.na(Species))
 
 # Load taxonomy data
 
-ncbi.tax <- readr::read_tsv(file.path("rankedlineage.dmp"), 
+ncbi.tax <- readr::read_tsv(file.path(R.utils::readWindowsShortcut("rankedlineage.dmp.lnk")$pathname), 
                      col_names = c("id", "name", "species", "genus", "family", "order", "class","phylum", "kingdom", "superkingdom"), 
                      col_types=("i-c-c-c-c-c-c-c-c-c-"))
 
