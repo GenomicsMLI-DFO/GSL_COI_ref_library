@@ -4,9 +4,8 @@ __Main author:__  Audrey Bourret
 __Affiliation:__  Fisheries and Oceans Canada (DFO)   
 __Group:__        Laboratory of genomics   
 __Location:__     Maurice Lamontagne Institute  
-__Affiliated publication:__  Bourret, A., Nozères, C., Parent, É., Parent, G.J. (2022). Maximizing the reliability and the number of species assignments in metabarcoding studies. bioRxiv 2022.11.17.513905; doi: https://doi.org/10.1101/2022.11.17.513905  
+__Affiliated publication:__  Bourret, A., Nozères, C., Parent, É., Parent, G.J. (2023). Maximizing the reliability and the number of species assignments in metabarcoding studies using a curated regional library and a public repository. Metabarcoding and Metagenomics 7: 37–49. https://doi.org/10.3897/mbmg.7.98539  
 __Contact:__      audrey.bourret@dfo-mpo.gc.ca
-
 
 - [Objective](#objective)
 - [Status](#status)
